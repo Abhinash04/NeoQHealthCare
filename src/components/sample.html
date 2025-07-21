@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoQ Landing Page</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Montserrat', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+        <img src="logo.png" alt="NeoQ Logo" class="h-8" />
+        <div class="hidden md:flex space-x-10 text-sm">
+          <a href="#about" class="hover:font-semibold">About Us</a>
+          <a href="#products" class="hover:font-semibold">Our Products</a>
+          <a href="#whyus" class="hover:font-semibold">Why Us!</a>
+          <a href="#contact" class="border border-gray-800 px-4 py-1 rounded-full hover:bg-gray-800 hover:text-white">Contact Us</a>
+        </div>
+        <button class="md:hidden" id="menuBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-24 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-10">
+        <div>
+          <h1 class="text-4xl font-bold leading-snug text-[#00145B]">
+            Revolutionizing <br /><span class="text-[#13B2F3]">NeoNatal Care</span>
+          </h1>
+          <p class="mt-4 text-sm">
+            Empowering Early <br />Diagnosis & Monitoring
+          </p>
+          <a href="#products" class="inline-flex items-center mt-6 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800">
+            Our Products
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="hero.png" alt="Hero Image" class="rounded-2xl w-full shadow-lg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 px-6 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#00145B]">
+          About <span class="text-[#13B2F3]">Us</span>
+        </h2>
+        <div class="mt-10 grid md:grid-cols-2 gap-6">
+          <!-- Repeatable Card Elements -->
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Medtech with a mission</h3>
+            <p class="text-sm mt-2">
+              We’re a startup focused on neonatal care, designing life-saving tools for newborns in need.
+            </p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Built by <span class="text-[#13B2F3] font-bold">ENGINEERS & CLINICIANS</span> who care.</h3>
+            <p class="text-sm mt-2">
+              We combine deep tech expertise with front-line medical insight to make tools that matter.
+            </p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Every newborn deserves accurate care.</h3>
+            <p class="text-sm mt-2">
+              No matter where they’re born, timely diagnosis should be a right, not a privilege.
+            </p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h3 class="font-semibold">Driven by research, grounded in care.</h3>
+            <p class="text-sm mt-2">
+              We work closely with pediatric experts and validate every product in the field.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Products Section -->
+    <section id="products" class="py-20 px-6 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#00145B]">
+          Our <span class="text-[#13B2F3]">Products</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <!-- Product Cards -->
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <h3 class="font-bold text-[#00145B]">NeoTrak</h3>
+            <p class="text-sm mt-2 text-gray-700">
+              Wearable Neonatal Monitor for real-time tracking of vital parameters including temperature, hydration, and more.
+            </p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <h3 class="font-bold text-[#00145B]">BiliFast</h3>
+            <p class="text-sm mt-2 text-gray-700">Rapid Jaundice Detection Kit.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition">
+            <h3 class="font-bold text-[#00145B]">BiliFast Pro</h3>
+            <p class="text-sm mt-2 text-gray-700">Handheld TcB Monitor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="whyus" class="py-20 px-6 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-[#00145B]">
+          Why <span class="text-[#13B2F3]">Us</span>
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h4 class="font-semibold text-sm">Clinically-Validated Designs</h4>
+            <p class="text-sm mt-2">Built with inputs from leading neonatologists and pediatricians.</p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h4 class="font-semibold text-sm">Technology with Purpose</h4>
+            <p class="text-sm mt-2">Combining FDA-grade sensors, AI algorithms, and edge-computing.</p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h4 class="font-semibold text-sm">India-Centric Innovation</h4>
+            <p class="text-sm mt-2">Tailored for low-resource hospitals and rural access points.</p>
+          </div>
+          <div class="bg-[#FAFAFA] p-6 rounded-xl shadow-sm">
+            <h4 class="font-semibold text-sm">Scalable and Affordable</h4>
+            <p class="text-sm mt-2">Built to be cost-effective without compromising quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-20 px-6 lg:px-12 bg-white">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-bold text-[#00145B]">
+            Contact <span class="text-[#13B2F3]">Us</span>
+          </h2>
+          <ul class="mt-6 space-y-2 text-sm">
+            <li><strong>Email:</strong> info@neoq.in</li>
+            <li><strong>Phone:</strong> +91-8908807028</li>
+            <li><strong>Address:</strong> L-12/27, Panchasakha Nagar, Bhubaneswar, Odisha, India - 751019</li>
+          </ul>
+        </div>
+        <form class="space-y-4">
+          <input type="text" placeholder="Your Name" class="w-full border border-gray-300 px-4 py-2 rounded" />
+          <input type="email" placeholder="Email" class="w-full border border-gray-300 px-4 py-2 rounded" />
+          <textarea rows="4" placeholder="Message" class="w-full border border-gray-300 px-4 py-2 rounded"></textarea>
+          <button class="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#00145B] text-white py-10 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div>
+          <img src="logo.png" alt="NeoQ" class="h-6 mb-2" />
+          <p class="text-xs">All copyright to NeoQ</p>
+        </div>
+        <div class="text-sm">
+          <p>Privacy Policy</p>
+          <p>Terms & Conditions</p>
+          <p>Career</p>
+        </div>
+        <div class="text-sm">
+          <p>About</p>
+          <p>Products</p>
+          <p>Why Us!</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for menu (optional, can be expanded) -->
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      menuBtn?.addEventListener('click', () => {
+        alert('Toggle mobile menu (JS logic can be added here)');
+      });
+    </script>
+  </body>
+</html>

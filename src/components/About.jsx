@@ -1,0 +1,125 @@
+import cribIcon from "../assets/cribIcon.png";
+import researchIcon from "../assets/researchIcon.png";
+import missionIcon from "../assets/missonIcon.png";
+
+const AboutUs = () => {
+  return (
+    <section
+      id="about-us"
+      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
+    >
+      <div className="w-full max-w-[1122px] mx-auto">
+        <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-montserrat font-semibold leading-tight lg:leading-[57px] text-left bg-[linear-gradient(90deg,#00145b_0%,#13b2f3_100%)] bg-clip-text text-transparent">
+          About Us
+        </h2>
+
+        <div className="flex flex-col lg:flex-row gap-8 w-full">
+          {/* Left Column */}
+          <div className="flex flex-col gap-8 w-full lg:w-1/2">
+            {/* Mission Card */}
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-14">
+              <div className="flex flex-col sm:flex-row gap-6 lg:gap-7 items-start">
+                <div className="w-16 h-16 flex-shrink-0">
+                  <img
+                    src={missionIcon}
+                    alt="Mission icon"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="flex-1">
+                  <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left">
+                    <span className="font-semibold text-global-1">
+                      Medtech with a mission{" "}
+                    </span>
+                    <span className="font-normal text-global-3">
+                      We are a startup focused on neonatal care, designing
+                      life-saving tools for newborns in need.
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Care Card */}
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-12">
+              <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
+                <div className="flex-1 lg:w-[42%]">
+                  <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left">
+                    <span className="font-semibold text-global-1">
+                      Every newborn deserves accurate care.{" "}
+                    </span>
+                    <span className="font-normal text-global-3">
+                      No matter where they are born, timely diagnosis should be
+                      a right, not a privilege.
+                    </span>
+                  </p>
+                </div>
+                <div className="w-full lg:w-[48%] lg:self-end">
+                  <img
+                    src={cribIcon}
+                    alt="Medical chart"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="flex flex-col gap-8 w-full lg:w-1/2">
+            {/* Engineers & Clinicians Card */}
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-12">
+              <div className="text-center">
+                <p className="text-lg sm:text-xl font-azeret leading-6 lg:leading-[22px] text-left mb-6 lg:mb-8">
+                  <span className="font-semibold text-global-1">Built by</span>
+                  <br />
+                  <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3]">
+                    ENGINEERS &{" "}
+                  </span>
+                  <br />
+                  <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3]">
+                    CLINICIANS
+                  </span>
+                  <span className="text-lg sm:text-xl font-bold text-global-1">
+                    {" "}
+                  </span>
+                  <span className="text-lg sm:text-xl font-semibold text-global-1">
+                    who care.
+                  </span>
+                </p>
+                <p className="text-base sm:text-lg font-azeret font-normal leading-6 lg:leading-[27px] text-global-3 text-left">
+                  We combine deep tech expertise with front-line medical insight
+                  to make tools that matter.
+                </p>
+              </div>
+            </div>
+
+            {/* Research Card */}
+            <div className="bg-global-3 rounded-3xl relative overflow-hidden h-56">
+              <div className="p-8 lg:p-12 relative z-10">
+                <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] text-left">
+                  <span className="text-lg font-bold text-global-1">
+                    Driven by research
+                  </span>
+                  <span className="font-normal text-global-2">
+                    , grounded in care. We work closely with pediatric experts
+                    and validate every product in the field.
+                  </span>
+                </p>
+              </div>
+              <div className="absolute bottom-0 right-0 w-32 h-32">
+                <img
+                  src={researchIcon}
+                  alt="Research flask"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUs;
