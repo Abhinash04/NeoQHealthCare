@@ -19,7 +19,7 @@ const Innovation = () => {
                 Neonatal care with{" "}
               </span> <br />
               <span className="text-3xl sm:text-4xl lg:text-[48px] font-bold italic leading-tight lg:leading-[48px]">
-                Innovation & Expertise
+                Innovation <br />& Expertise
               </span>
             </h2>
           </div>

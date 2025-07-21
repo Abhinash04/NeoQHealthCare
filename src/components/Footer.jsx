@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/FooterLogo.png";
+import logo from '../assets/FooterLogo.png'
 import { CopyrightIcon } from "lucide-react";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 lg:gap-0 w-full">
           {/* Left Section - Logo and Copyright */}
-          <div className="flex flex-col gap-5 w-full lg:w-auto">
+          <div className="flex flex-col gap-5 w-full lg:w-auto lg:ml-24">
             <div className="w-[150px] h-[32px]">
               <img
                 src={logo}
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Navigation Links */}
-          <div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-16 lg:gap-24 w-full lg:w-auto">
+          <div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-16 lg:gap-24 w-full lg:w-auto lg:mr-40">
             {/* Legal Links */}
             <ul className="flex flex-col gap-4 w-full sm:w-auto">
               <li>

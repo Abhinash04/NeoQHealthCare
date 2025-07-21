@@ -164,7 +164,7 @@ const Products = () => {
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-semibold leading-tight lg:leading-[64px] text-left bg-gradient-to-r from-[#00145b] to-[#13b2f3] bg-clip-text text-transparent mb-8 lg:mb-10">
+        <h2 id="heading" className="mb-8">
           Our Products
         </h2>
 

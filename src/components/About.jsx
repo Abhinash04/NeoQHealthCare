@@ -9,7 +9,7 @@ const AboutUs = () => {
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-montserrat font-semibold leading-tight lg:leading-[57px] text-left bg-[linear-gradient(90deg,#00145b_0%,#13b2f3_100%)] bg-clip-text text-transparent">
+        <h2 id="heading" className="mb-12">
           About Us
         </h2>
 
@@ -18,7 +18,7 @@ const AboutUs = () => {
           <div className="flex flex-col gap-8 w-full lg:w-1/2">
             {/* Mission Card */}
             <div className="bg-global-3 rounded-3xl p-8 lg:p-14">
-              <div className="flex flex-col sm:flex-row gap-6 lg:gap-7 items-start">
+              <div className="flex flex-col sm:flex-row gap-6 lg:gap-7 items-start lg:items-center lg:justify-center">
                 <div className="w-16 h-16 flex-shrink-0">
                   <img
                     src={missionIcon}
@@ -29,8 +29,8 @@ const AboutUs = () => {
                 <div className="flex-1">
                   <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left">
                     <span className="font-semibold text-global-1">
-                      Medtech with a mission{" "}
-                    </span>
+                      Medtech with a mission.{" "}
+                    </span> <br />
                     <span className="font-normal text-global-3">
                       We are a startup focused on neonatal care, designing
                       life-saving tools for newborns in need.
@@ -41,7 +41,7 @@ const AboutUs = () => {
             </div>
 
             {/* Care Card */}
-            <div className="bg-global-3 rounded-3xl p-8 lg:p-12">
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-12 lg:relative">
               <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
                 <div className="flex-1 lg:w-[42%]">
                   <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left">
@@ -58,7 +58,7 @@ const AboutUs = () => {
                   <img
                     src={cribIcon}
                     alt="Medical chart"
-                    className="w-full h-auto object-contain"
+                    className="lg:absolute lg:bottom-0 lg:right-0 w-64 h-64 object-contain"
                   />
                 </div>
               </div>

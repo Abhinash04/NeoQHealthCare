@@ -11,7 +11,7 @@ const WhyUs = () => {
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-montserrat font-semibold leading-tight lg:leading-[64px] text-left bg-[linear-gradient(90deg,#00145b_0%,#13b2f3_100%)] bg-clip-text text-transparent mb-8 lg:mb-9">
+        <h2 id="heading">
           Why Us
         </h2>
 

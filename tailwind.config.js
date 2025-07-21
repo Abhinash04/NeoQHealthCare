@@ -21,7 +21,7 @@ export default {
         },
       },
       fontFamily: {
-        azeret: ["Azeret Mono", "monospace"],
+        azeret: ["Azeret", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
     },
