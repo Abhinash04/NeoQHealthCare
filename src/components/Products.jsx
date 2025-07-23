@@ -1,7 +1,7 @@
 import { useState } from "react";
 import product0 from "../assets/Product0.png";
 import product1 from "../assets/Product1.png";
-import product2 from "../assets/Product2.png";
+import product2 from "../assets/product2.png";
 import upArrow from "../assets/UpArrow.png";
 import downArrow from "../assets/DownArrow.png";
 
@@ -25,10 +25,10 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               {/*Title & Subtitle */}
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
-                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2">
-                    {title}
-                  </h3>
-                  <p className="text-base font-medium leading-5 text-gray-600">
+                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2 whitespace-nowrap">
+                  {title}
+                </h3>
+                  <p className="text-base font-medium leading-5 text-gray-600 whitespace-nowrap">
                     {subtitle}
                   </p>
                 </div>
@@ -42,11 +42,11 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 </div>
               </div>
 
-              <div className="relative max-w-full h-[330px] flex items-center justify-center overflow-hidden">
+              <div className="flex-1 relative w-full flex items-end justify-center overflow-hidden">
                 <img
                   src={image}
                   alt={`${title} device`}
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>

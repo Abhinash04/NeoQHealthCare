@@ -14,7 +14,7 @@ const Hero = () => {
       <div id="hero"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-40 sm:mt-24 lg:mt-40">
         <div className="w-full max-w-[1200px] mx-auto">
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 w-full">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-40 w-full">
             {/* Hero Text */}
             <div className="w-full ml-10 lg:w-[38%]">
               <h1 id="heading">
@@ -25,9 +25,9 @@ const Hero = () => {
             </div>
 
             {/* Right Side Content */}
-            <div className="flex flex-col lg:flex-row items-center lg:items-end lg:ml-14 gap-6 lg:gap-0 w-full lg:flex-1">
+            <div className="flex flex-col lg:flex-row items-center lg:items-end gap-10 w-full lg:flex-1">
               {/* Empowering Section */}
-              <div className="flex items-center gap-6 lg:gap-12 w-fit lg:mt-14 sm-gap-6">
+              <div className="flex items-center gap-12 w-fit lg:mt-14 sm-gap-6">
                 <img src={divider} alt="divider" className="h-8 w-auto" />
                 <p className="text-sm sm:text-base font-azeret font-semibold leading-5 text-black max-w-[250px] lg:text-left">
                   Empowering Early <br />
@@ -38,7 +38,7 @@ const Hero = () => {
               {/* Our Products Button */}
               <div
                 onClick={scrollToProducts}
-                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:mr-10 justify-center lg:justify-center cursor-pointer hover:bg-cyan-400 transition-all duration-200 text-white hover:text-black"
+                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] justify-center lg:justify-center cursor-pointer hover:bg-cyan-400 transition-all duration-200 text-white hover:text-black"
               >
                 <span className="text-base font-azeret font-bold leading-[19px">
                   Our Products

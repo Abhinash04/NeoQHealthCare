@@ -61,7 +61,7 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-between w-[518px]">
+            <nav className="hidden lg:flex items-center justify-center w-[519px]">
               <div className="flex items-center gap-10">
                 <button
                   role="menuitem"
@@ -84,14 +84,14 @@ const Navbar = () => {
                 >
                   Why Us!
                 </button>
+                <Button
+                  variant="outline"
+                  onClick={() => scrollToSection("contact-us")}
+                  className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200"
+                >
+                  Contact Us
+                </Button>
               </div>
-              <Button
-                variant="outline"
-                onClick={() => scrollToSection("contact-us")}
-                className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200"
-              >
-                Contact Us
-              </Button>
             </nav>
           </div>
         </div>
