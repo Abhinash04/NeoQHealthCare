@@ -13,7 +13,7 @@ const Hero = () => {
     <>
       <div id="hero"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-40 sm:mt-24 lg:mt-40">
-        <div className="w-full max-w-[1122px] mx-auto">
+        <div className="w-full max-w-[1120px] mx-auto">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 w-full">
             {/* Hero Text */}
             <div className="w-full ml-8 lg:w-[38%]">

@@ -28,7 +28,7 @@ const ContactUs = () => {
     <>
       <div id="contact-us"></div>
       <section className="w-full px-4 lg:mb-40 mb-8 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
-        <div className="w-full max-w-[1122px] mx-auto">
+        <div className="w-full max-w-[1120px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 w-full">
             {/* Left Side */}
             <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1 lg:ml-8">

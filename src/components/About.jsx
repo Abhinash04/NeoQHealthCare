@@ -7,7 +7,7 @@ const AboutUs = () => {
     <>
       <div id="about-us"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
-        <div className="w-full max-w-[1122px] mx-auto">
+        <div className="w-full max-w-[1120px] mx-auto">
           <h2 id="heading" className="mb-12 lg:ml-8 max-w-[241px]">
             About Us
           </h2>
