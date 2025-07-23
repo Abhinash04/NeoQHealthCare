@@ -66,28 +66,28 @@ const Navbar = () => {
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("about-us")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
                 >
                   About Us
                 </button>
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("products")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
                 >
                   Our Products
                 </button>
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("why-us")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
                 >
                   Why Us!
                 </button>
                 <Button
                   variant="outline"
                   onClick={() => scrollToSection("contact-us")}
-                  className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200"
+                  className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200 focus:outline-none focus:ring-0"
                 >
                   Contact Us
                 </Button>

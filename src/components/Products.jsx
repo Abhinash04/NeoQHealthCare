@@ -26,14 +26,16 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
                   <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2 whitespace-nowrap">
-                  {title}
-                </h3>
+                    {title}
+                  </h3>
                   <p className="text-base font-medium leading-5 text-gray-600 whitespace-nowrap">
                     {subtitle}
                   </p>
                 </div>
-                <div className="w-14 h-14 flex items-center justify-cent
-                er">
+                <div
+                  className="w-14 h-14 flex items-center justify-cent
+                er"
+                >
                   <img
                     src={upArrow}
                     alt="Flip card"
@@ -110,28 +112,28 @@ const Products = () => {
   ];
 
   return (
-    <section
-      id="products"
-      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
-    >
-      <div className="w-full max-w-[1120px] mx-auto">
-        <h2 id="heading" className="mb-8 max-w-[347px]">
-          Our Products
-        </h2>
+    <>
+      <div id="products"></div>
+      <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
+        <div className="w-full max-w-[1120px] mx-auto">
+          <h2 id="heading" className="mb-8 max-w-[347px]">
+            Our Products
+          </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
-          {productsData.map((product, index) => (
-            <ProductCard
-              key={index}
-              title={product.title}
-              subtitle={product.subtitle}
-              image={product.image}
-              description={product.description}
-            />
-          ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
+            {productsData.map((product, index) => (
+              <ProductCard
+                key={index}
+                title={product.title}
+                subtitle={product.subtitle}
+                image={product.image}
+                description={product.description}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
