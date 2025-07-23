@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "./ui/Button";
 import EditText from "./ui/EditText";
 import { Building, Mail, Phone, Send, Facebook, Linkedin } from "lucide-react";

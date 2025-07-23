@@ -1,4 +1,3 @@
-import React from "react";
 import ValidationIcon from "../assets/ValidationIcon.png";
 import technologyIcon from "../assets/TechnologyIcon.png";
 import IndiaIcon from "../assets/IndiaIcon.png";

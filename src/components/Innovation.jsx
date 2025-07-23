@@ -1,4 +1,3 @@
-import React from "react";
 import innovationImg from "../assets/innovation.png";
 
 const Innovation = () => {
