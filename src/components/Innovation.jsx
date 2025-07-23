@@ -10,16 +10,12 @@ const Innovation = () => {
           style={{ backgroundImage: `url(${innovationImg})` }}
         >
           <div className="px-8 sm:px-12 lg:px-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-[48px] font-montserrat leading-tight lg:leading-[48px] text-global-6">
-              <span className="text-2xl sm:text-3xl lg:text-[32px] font-medium leading-tight lg:leading-[38px]">
-                Transforming
+            <h2 className="text-2xl sm:text-3xl lg:text-[48px] font-montserrat text-global-6">
+              <span className="block text-2xl sm:text-3xl lg:text-[32px] font-medium leading-snug lg:leading-[36px]">
+                Transforming <br />Neonatal care with
               </span>
-              <br />
-              <span className="text-2xl sm:text-3xl lg:text-[32px] font-medium leading-tight lg:leading-[38px]">
-                Neonatal care with{" "}
-              </span> <br />
-              <span className="text-3xl sm:text-4xl lg:text-[48px] font-bold italic leading-tight lg:leading-[48px]">
-                Innovation <br />& Expertise
+              <span className="block text-3xl sm:text-4xl lg:text-[48px] font-bold italic leading-tight lg:leading-[48px] mt-2">
+                Innovation <br /> & Expertise
               </span>
             </h2>
           </div>

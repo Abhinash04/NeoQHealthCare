@@ -1,8 +1,9 @@
 import { useState } from "react";
-import product1 from "../assets/Product1.png"; // Ensure this path is correct
-import product2 from "../assets/Product2.png"; // Ensure this path is correct
-import upArrow from "../assets/UpArrow.png";   // Ensure this path is correct
-import downArrow from "../assets/DownArrow.png"; // Ensure this path is correct
+import product0 from "../assets/Product0.png";
+import product1 from "../assets/Product1.png"; 
+import product2 from "../assets/Product2.png";
+import upArrow from "../assets/UpArrow.png";  
+import downArrow from "../assets/DownArrow.png";
 
 const ProductCard = ({ 
   title, 
@@ -24,7 +25,7 @@ const ProductCard = ({
           <div className="flip-card-front">
             <div className="p-5 lg:p-6 h-full">
               <div className="flex justify-between items-start mb-6 lg:mb-7">
-                <div className="w-[60%]">
+                <div className="w-[60%] text-left">
                   <h3 className="text-2xl lg:text-[32px] font-bold leading-tight lg:leading-[40px] text-[#00145B] mb-2">
                     {title}
                   </h3>
@@ -53,7 +54,7 @@ const ProductCard = ({
           {/* Back Side */}
           <div className="flip-card-back">
             <div className="p-6 lg:p-7 h-full flex flex-col justify-between">
-              <div>
+              <div className="text-left">
                 <h3 className="text-2xl lg:text-[28px] font-bold leading-tight text-[#00145B] mb-2">
                   {title}
                 </h3>
@@ -68,7 +69,7 @@ const ProductCard = ({
                 <img
                     src={downArrow}
                     alt="Flip back"
-                    className="w-8 h-8 object-contain opacity-60 absolute bottom-4 left-4"
+                    className="w-8 h-8 object-contain opacity-60 absolute bottom-0 left-0"
                 />
                 </div>
             </div>
@@ -141,7 +142,7 @@ const Products = () => {
     {
       title: "NeoTrak",
       subtitle: "Wearable Neonatal Monitor",
-      image: product1,
+      image: product0,
       description: "NeoTrak is a non-invasive, skin-friendly patch designed to continuously monitor vital parameters in preterm and low birth weight infants. It tracks respiration, Skin Bilirubin, Hydration, Body and ambient Temperature, and more, with real-time alerts via a connected dashboard. Ideal for hospitals and home care, it reduces manual monitoring and enables timely intervention."
     },
     {
@@ -161,7 +162,7 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
+      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48 lg:ml-8"
     >
       <div className="w-full max-w-[1122px] mx-auto">
         <h2 id="heading" className="mb-8">

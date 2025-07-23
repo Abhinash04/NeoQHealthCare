@@ -32,7 +32,7 @@ const ContactUs = () => {
       <div className="w-full max-w-[1122px] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 w-full">
           {/* Left Side - Contact Info */}
-          <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1">
+          <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1 lg:ml-8">
             <h2 id="heading">
               Contact Us
             </h2>
@@ -79,7 +79,7 @@ const ContactUs = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="flex flex-col gap-8 w-full lg:w-[40%] lg:self-end">
+          <div className="flex flex-col gap-8 w-full lg:w-[40%] lg:self-end lg:mr-12">
             <form onSubmit={handleSubmit} className="flex flex-col gap-8">
               {/* Email Field */}
               <div className="border-b border-[#b9bbc3] pb-2">

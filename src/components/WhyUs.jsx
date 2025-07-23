@@ -8,10 +8,10 @@ const WhyUs = () => {
   return (
     <section
       id="why-us"
-      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
+      className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48 lg:ml-8"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 id="heading">
+        <h2 id="heading" className="mb-8">
           Why Us
         </h2>
 

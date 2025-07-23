@@ -142,28 +142,28 @@ a:focus {
 }
 
 #heading {
-  font-size: 1.875rem; /* Tailwind: text-3xl */
+  font-size: 1.875rem;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600; /* Tailwind: font-semibold */
-  line-height: 2.25rem; /* Tailwind: leading-tight */
+  font-weight: 600;
+  line-height: 2.25rem;
   text-align: left;
   background: linear-gradient(90deg, #00145b 0%, #13b2f3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* fallback for modern browsers */
+  background-clip: text;
   color: transparent;
 }
 
 /* Responsive adjustments */
 @media (min-width: 640px) {
   #heading {
-    font-size: 2.25rem; /* Tailwind: sm:text-4xl */
+    font-size: 2.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   #heading {
-    font-size: 52px; /* Tailwind: lg:text-[52px] */
-    line-height: 57px; /* Tailwind: lg:leading-[57px] */
+    font-size: 52px;
+    line-height: 57px;
   }
 }

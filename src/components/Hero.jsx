@@ -10,7 +10,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20 lg:mt-26">
+    <section className="w-full px-4 sm:px-6 lg:px-8 mt-16 sm:mt-20 lg:mt-40">
       <div className="w-full max-w-[1122px] mx-auto">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 w-full">
           {/* Hero Text */}
@@ -23,24 +23,24 @@ const Hero = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="flex flex-col lg:flex-row items-center lg:items-end gap-6 lg:gap-0 w-full lg:flex-1">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end lg:ml-14 gap-6 lg:gap-0 w-full lg:flex-1">
             {/* Empowering Section */}
-            <div className="flex items-center lg:gap-16 w-fit">
-              <img src={divider} alt="divider" className="h-4 w-auto" />
-              <p className="text-sm sm:text-base font-azeret font-semibold leading-5 text-global-1 max-w-[250px] text-center">
-                Empowering Early Diagnosis & Monitoring
+            <div className="flex items-center lg:gap-12 w-fit lg:mt-14">
+              <img src={divider} alt="divider" className="h-8 w-auto" />
+              <p className="text-sm sm:text-base font-azeret font-semibold leading-5 text-black max-w-[250px] lg:text-left">
+                Empowering Early <br />Diagnosis & Monitoring
               </p>
             </div>
 
             {/* Our Products Button */}
             <div
               onClick={scrollToProducts}
-              className="flex items-center gap-2 bg-global-2 rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:mr-8 lg:ml-16 justify-center lg:justify-center cursor-pointer hover:bg-opacity-80 transition-all duration-200"
+              className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:mr-8 lg:ml-16 justify-center lg:justify-center cursor-pointer hover:bg-blue-500 transition-all duration-200 text-white hover:text-black"
             >
-              <span className="text-base font-azeret font-bold leading-[19px] text-global-6">
+              <span className="text-base font-azeret font-bold leading-[19px">
                 Our Products
               </span>
-              <ArrowRight className="w-5 h-5 text-white" />
+              <ArrowRight className="w-5 h-5" />
             </div>
           </div>
         </div>

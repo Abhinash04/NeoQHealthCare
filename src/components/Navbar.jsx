@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full mt-6 px-4 sm:px-6 lg:px-8 relative z-50">
+      <header className="w-full top-0 bg-white mt-6 px-4 sm:px-6 lg:px-8 fixed z-50">
         <div className="w-full max-w-7xl mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
@@ -60,7 +60,7 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-between w-[518px] lg:mr-12">
+            <nav className="hidden lg:flex items-center justify-between w-[518px] lg:mr-16">
               <div className="flex items-center gap-10">
                 <button
                   role="menuitem"
