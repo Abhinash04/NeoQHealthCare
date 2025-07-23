@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="w-full max-w-[1200px] mx-auto">
           <div className="flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-12 w-full">
             {/* Hero Text */}
-            <div className="w-full ml-8 lg:w-[38%]">
+            <div className="w-full ml-10 lg:w-[38%]">
               <h1 id="heading">
                 Revolutionizing
                 <br />
@@ -38,7 +38,7 @@ const Hero = () => {
               {/* Our Products Button */}
               <div
                 onClick={scrollToProducts}
-                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:mr-8 lg:ml-16 justify-center lg:justify-center cursor-pointer hover:bg-cyan-400 transition-all duration-200 text-white hover:text-black"
+                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:mr-10 justify-center lg:justify-center cursor-pointer hover:bg-cyan-400 transition-all duration-200 text-white hover:text-black"
               >
                 <span className="text-base font-azeret font-bold leading-[19px">
                   Our Products

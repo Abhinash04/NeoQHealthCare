@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="w-full mt-6 mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
-            <div className="w-[150px] h-[32px] lg:ml-8 flex-shrink-0">
+            <div className="w-[150px] h-[32px] flex-shrink-0">
               <img
                 src={logo}
                 alt="NEO Medical Logo"
@@ -88,7 +88,7 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("contact-us")}
-                className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200 lg:mr-12"
+                className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200"
               >
                 Contact Us
               </Button>
