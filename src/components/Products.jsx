@@ -56,7 +56,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
           <div className="flip-card-back">
             <div className="p-6 lg:p-7 h-full flex flex-col justify-between">
               <div className="text-left">
-                <h3 className="text-2xl lg:text-[28px] font-bold leading-tight text-[#00145B] mb-2">
+                <h3 className="text-2xl lg:text-[28px] font-bold font-montserrat leading-tight text-[#00145B] mb-2">
                   {title}
                 </h3>
                 <p className="text-base font-medium leading-[20px] text-[#666666] mb-4">
@@ -169,8 +169,8 @@ const Products = () => {
       id="products"
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48 lg:ml-8"
     >
-      <div className="w-full max-w-[1122px] mx-auto">
-        <h2 id="heading" className="mb-8">
+      <div className="w-full max-w-[1120px] mx-auto">
+        <h2 id="heading" className="mb-8 max-w-[347px]">
           Our Products
         </h2>
 

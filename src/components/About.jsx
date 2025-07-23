@@ -9,15 +9,15 @@ const AboutUs = () => {
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 id="heading" className="mb-12 lg:ml-8">
+        <h2 id="heading" className="mb-12 lg:ml-8 max-w-[241px]">
           About Us
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-8 w-full">
           {/* Left Column */}
-          <div className="flex flex-col gap-8 w-full lg:w-1/2">
+          <div className="flex flex-col gap-8 w-full lg:w-1/2 lg:min-h-[590px]">
             {/* Mission Card */}
-            <div className="bg-global-3 rounded-3xl p-8 lg:p-14 min-h-[200px] sm:min-h-[180px] lg:min-h-[160px]">
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-14 min-h-[200px] sm:min-h-[180px] lg:min-h-[224px]">
               <div className="flex flex-col sm:flex-row gap-6 lg:gap-7 items-start lg:items-center lg:justify-center h-full">
                 <div className="w-16 h-16 flex-shrink-0">
                   <img
@@ -41,7 +41,7 @@ const AboutUs = () => {
             </div>
 
             {/* Care Card - Matching Engineers card height */}
-            <div className="bg-global-3 rounded-3xl p-8 lg:p-12 relative overflow-hidden min-h-[320px] sm:min-h-[300px] lg:min-h-[280px]">
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-12 relative overflow-hidden min-h-[320px] sm:min-h-[300px] lg:min-h-[334px]">
               <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 h-full">
                 <div className="flex-1 lg:w-[58%] lg:pr-4">
                   <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left">
@@ -53,7 +53,7 @@ const AboutUs = () => {
                     </span>
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-48 lg:h-56">
+                <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-72 lg:h-72 translate-x-[16px]">
                   <img
                     src={cribIcon}
                     alt="Medical chart"
@@ -65,9 +65,9 @@ const AboutUs = () => {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col gap-8 w-full lg:w-1/2">
+          <div className="flex flex-col gap-8 w-full lg:w-1/2 lg:min-h-[590px]">
             {/* Engineers & Clinicians Card */}
-            <div className="bg-global-3 rounded-3xl p-8 lg:p-12 min-h-[320px] sm:min-h-[300px] lg:min-h-[280px]">
+            <div className="bg-global-3 rounded-3xl p-8 lg:p-12 min-h-[320px] sm:min-h-[300px] lg:min-h-[334px]">
               <div className="text-center h-full flex flex-col justify-center">
                 <p className="text-lg sm:text-xl font-azeret leading-6 lg:leading-[22px] text-left mb-6 lg:mb-8">
                   <span className="font-semibold text-global-1">Built by</span>
@@ -94,7 +94,7 @@ const AboutUs = () => {
             </div>
 
             {/* Research Card - Matching Mission card height */}
-            <div className="bg-global-3 rounded-3xl relative overflow-hidden min-h-[200px] sm:min-h-[180px] lg:min-h-[160px]">
+            <div className="bg-global-3 rounded-3xl relative overflow-hidden min-h-[200px] sm:min-h-[180px] lg:min-h-[224px]">
               <div className="p-8 lg:p-12 relative z-10 h-full flex items-center">
                 <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] text-left">
                   <span className="text-lg font-bold text-global-1">

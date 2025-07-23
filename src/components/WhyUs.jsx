@@ -11,7 +11,7 @@ const WhyUs = () => {
       className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48 lg:ml-8"
     >
       <div className="w-full max-w-[1122px] mx-auto">
-        <h2 id="heading" className="mb-8">
+        <h2 id="heading" className="mb-8 max-w-[202px]">
           Why Us
         </h2>
 

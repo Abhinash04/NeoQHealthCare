@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <>
       <header className="w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50">
-        <div className="w-full mt-6 mb-6 max-w-7xl mx-auto">
+        <div className="w-full mt-6 mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
-            <div className="w-[150px] h-[32px] lg:ml-28 flex-shrink-0">
+            <div className="w-[150px] h-[32px] lg:ml-8 flex-shrink-0">
               <img
                 src={logo}
                 alt="NEO Medical Logo"
@@ -60,7 +60,7 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-between w-[518px] lg:mr-16">
+            <nav className="hidden lg:flex items-center justify-between w-[518px]">
               <div className="flex items-center gap-10">
                 <button
                   role="menuitem"
@@ -87,7 +87,7 @@ const Navbar = () => {
               <Button
                 variant="outline"
                 onClick={() => scrollToSection("contact-us")}
-                className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200 lg:mr-16"
+                className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200 lg:mr-12"
               >
                 Contact Us
               </Button>
