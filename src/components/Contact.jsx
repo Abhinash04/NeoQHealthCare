@@ -31,7 +31,7 @@ const ContactUs = () => {
         <div className="w-full max-w-[1120px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 w-full">
             {/* Left Side */}
-            <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1 lg:ml-8">
+            <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1">
               <h2 id="heading" className="max-w-[290px]">
                 Contact Us
               </h2>
