@@ -67,20 +67,20 @@ const ContactUs = () => {
             {/* Social Media Icons */}
             <div className="flex items-center gap-6 px-4">
               <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2">
-                <Facebook className="w-full h-full object-contain text-white" />
+                <Facebook className="w-full h-full object-contain text-white hover:text-cyan-400" />
               </button>
               <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2">
-                <Linkedin className="w-full h-full object-contain text-white" />
+                <Linkedin className="w-full h-full object-contain text-white hover:text-cyan-400" />
               </button>
               <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2.5">
-                <FaXTwitter className="w-full h-full object-contain text-white" />
+                <FaXTwitter className="w-full h-full object-contain text-white hover:text-cyan-400" />
               </button>
             </div>
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="flex flex-col gap-8 w-full lg:w-[40%] lg:self-end lg:mr-12">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               {/* Email Field */}
               <div className="border-b border-[#b9bbc3] pb-2">
                 <EditText
@@ -88,7 +88,7 @@ const ContactUs = () => {
                   placeholder="Your E-Mail"
                   value={formData.email}
                   onChange={handleInputChange("email")}
-                  className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5"
+                  className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5"
                 />
               </div>
 
@@ -98,7 +98,7 @@ const ContactUs = () => {
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleInputChange("subject")}
-                  className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5"
+                  className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5"
                 />
               </div>
 
@@ -108,7 +108,7 @@ const ContactUs = () => {
                   placeholder="Message"
                   value={formData.message}
                   onChange={handleInputChange("message")}
-                  className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5"
+                  className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5 h-16"
                 />
               </div>
 
@@ -116,7 +116,7 @@ const ContactUs = () => {
               <div className="flex justify-end">
                 <Button
                   type="submit"
-                  className="flex items-center justify-center gap-2 lg:w-32 bg-global-1 text-global-6 px-8 py-3 rounded-3xl hover:bg-global-2 transition-colors duration-200"
+                  className="flex items-center justify-center gap-2 lg:w-32 bg-black text-white hover:text-cyan-400 px-8 py-3 rounded-3xl transition-colors duration-200"
                 >
                   <span className="text-base font-montserrat font-semibold leading-5">
                     Send

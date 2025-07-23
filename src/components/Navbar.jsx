@@ -65,21 +65,21 @@ const Navbar = () => {
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("about-us")}
-                  className="text-base font-azeret font-medium leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
                 >
                   About Us
                 </button>
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("products")}
-                  className="text-base font-azeret font-medium leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
                 >
                   Our Products
                 </button>
                 <button
                   role="menuitem"
                   onClick={() => scrollToSection("why-us")}
-                  className="text-base font-azeret font-medium leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
+                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200"
                 >
                   Why Us!
                 </button>
