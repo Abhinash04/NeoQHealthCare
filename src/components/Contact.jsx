@@ -121,7 +121,7 @@ const ContactUs = () => {
                   <span className="text-base font-montserrat font-semibold leading-5">
                     Send
                   </span>
-                  <Send className="w-5 h-5" />
+                  <Send className="w-5 h-8" />
                 </Button>
               </div>
             </form>

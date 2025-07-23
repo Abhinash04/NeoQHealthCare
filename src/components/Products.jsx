@@ -1,16 +1,11 @@
 import { useState } from "react";
 import product0 from "../assets/Product0.png";
-import product1 from "../assets/Product1.png"; 
+import product1 from "../assets/Product1.png";
 import product2 from "../assets/Product2.png";
-import upArrow from "../assets/UpArrow.png";  
+import upArrow from "../assets/UpArrow.png";
 import downArrow from "../assets/DownArrow.png";
 
-const ProductCard = ({ 
-  title, 
-  subtitle, 
-  image, 
-  description,
-}) => {
+const ProductCard = ({ title, subtitle, image, description }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -20,11 +15,15 @@ const ProductCard = ({
   return (
     <>
       <div className="flip-card">
-        <div className={`flip-card-inner ${isFlipped ? 'flipped' : ''}`} onClick={handleFlip}>
+        <div
+          className={`flip-card-inner ${isFlipped ? "flipped" : ""}`}
+          onClick={handleFlip}
+        >
           {/* Front Side */}
           <div className="flip-card-front">
-            <div className="p-5 lg:p-6 h-full">
-              <div className="flex justify-between items-start mb-6 lg:mb-7">
+            <div className="p-0 h-full flex flex-col">
+              {/* Top: Title & Subtitle */}
+              <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
                   <h3 className="text-2xl lg:text-[32px] font-bold leading-tight lg:leading-[40px] text-[#00145B] mb-2">
                     {title}
@@ -37,15 +36,17 @@ const ProductCard = ({
                   <img
                     src={upArrow}
                     alt="Flip card"
-                    className="w-8 h-8 object-contain"
+                    className="w-16 h-16 object-contain"
                   />
                 </div>
               </div>
-              <div className="relative flex justify-center items-center h-[calc(100%-100px)]">
+
+              {/* Bottom: Full-width Image with Glow */}
+              <div className="relative w-full mt-auto">
                 <img
                   src={image}
                   alt={`${title} device`}
-                  className="max-w-full max-h-full object-contain"
+                  className="w-full h-auto object-contain relative z-10 scale-[1.1]"
                 />
               </div>
             </div>
@@ -67,21 +68,21 @@ const ProductCard = ({
               </div>
               <div className="relative w-full h-full">
                 <img
-                    src={downArrow}
-                    alt="Flip back"
-                    className="w-8 h-8 object-contain opacity-60 absolute bottom-0 left-0"
+                  src={downArrow}
+                  alt="Flip back"
+                  className="w-8 h-8 object-contain opacity-60 absolute bottom-0 left-0"
                 />
-                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <style jsx>{`
         .flip-card {
           background-color: transparent;
           width: 100%;
-          height: 400px;
+          height: 500px;
           perspective: 1000px;
           cursor: pointer;
         }
@@ -91,7 +92,7 @@ const ProductCard = ({
           width: 100%;
           height: 100%;
           text-align: center;
-          transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+          transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
           transform-style: preserve-3d;
         }
 
@@ -99,7 +100,8 @@ const ProductCard = ({
           transform: rotateY(180deg);
         }
 
-        .flip-card-front, .flip-card-back {
+        .flip-card-front,
+        .flip-card-back {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -121,13 +123,13 @@ const ProductCard = ({
             height: 350px;
           }
         }
-        
+
         /* Hover effect for desktop */
         @media (min-width: 1024px) {
           .flip-card:hover .flip-card-inner:not(.flipped) {
             transform: translateY(-2px) scale(1.02);
           }
-          
+
           .flip-card:hover .flip-card-inner.flipped {
             transform: translateY(-2px) scale(1.02) rotateY(180deg);
           }
@@ -143,20 +145,23 @@ const Products = () => {
       title: "NeoTrak",
       subtitle: "Wearable Neonatal Monitor",
       image: product0,
-      description: "NeoTrak is a non-invasive, skin-friendly patch designed to continuously monitor vital parameters in preterm and low birth weight infants. It tracks respiration, Skin Bilirubin, Hydration, Body and ambient Temperature, and more, with real-time alerts via a connected dashboard. Ideal for hospitals and home care, it reduces manual monitoring and enables timely intervention."
+      description:
+        "NeoTrak is a non-invasive, skin-friendly patch designed to continuously monitor vital parameters in preterm and low birth weight infants. It tracks respiration, Skin Bilirubin, Hydration, Body and ambient Temperature, and more, with real-time alerts via a connected dashboard. Ideal for hospitals and home care, it reduces manual monitoring and enables timely intervention.",
     },
     {
       title: "BiliFast",
       subtitle: "Rapid Jaundice Detection Kit",
-      image: product1, 
-      description: "BiliFast is a rapid, non-invasive jaundice detection kit designed for quick and accurate assessment of bilirubin levels in newborns. Using advanced photometric technology, it provides instant results without the need for blood samples, making it ideal for routine screening in hospitals, clinics, and community health centers."
+      image: product1,
+      description:
+        "BiliFast is a rapid, non-invasive jaundice detection kit designed for quick and accurate assessment of bilirubin levels in newborns. Using advanced photometric technology, it provides instant results without the need for blood samples, making it ideal for routine screening in hospitals, clinics, and community health centers.",
     },
     {
       title: "BiliFast Pro",
-      subtitle: "Handheld Jaundice Monitor", 
-      image: product2, 
-      description: "BiliFast Pro is an enhanced version of our jaundice detection system, featuring improved accuracy, cloud connectivity, and comprehensive reporting capabilities. Perfect for healthcare facilities requiring detailed documentation and remote monitoring of neonatal jaundice cases."
-    }
+      subtitle: "Handheld TcB Monitor",
+      image: product2,
+      description:
+        "BiliFast Pro is an enhanced version of our jaundice detection system, featuring improved accuracy, cloud connectivity, and comprehensive reporting capabilities. Perfect for healthcare facilities requiring detailed documentation and remote monitoring of neonatal jaundice cases.",
+    },
   ];
 
   return (
