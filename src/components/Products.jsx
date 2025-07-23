@@ -1,7 +1,7 @@
 import { useState } from "react";
 import product0 from "../assets/Product0.png";
 import product1 from "../assets/Product1.png";
-import product2 from "../assets/product2.png";
+import product2 from "../assets/Product2.png";
 import upArrow from "../assets/UpArrow.png";
 import downArrow from "../assets/DownArrow.png";
 
