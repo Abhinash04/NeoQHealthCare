@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "./ui/Button";
 import logo from "../assets/Logo.png";
 import { Menu, X } from "lucide-react";
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50">
+      <header className="w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 shadow-lg">
         <div className="w-full mt-6 mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
@@ -25,6 +25,7 @@ const Navbar = () => {
                 src={logo}
                 alt="NEO Medical Logo"
                 className="w-full h-full object-contain"
+                onClick={() => scrollToSection("hero")}
               />
             </div>
 

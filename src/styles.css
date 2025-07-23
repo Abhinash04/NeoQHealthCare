@@ -19,18 +19,40 @@
 }
 
 @layer utilities {
-  .bg-global-1 { background-color: var(--global-bg-1); }
-  .bg-global-2 { background-color: var(--global-bg-2); }
-  .bg-global-3 { background-color: var(--global-bg-3); }
-  .bg-global-4 { background-color: var(--global-bg-4); }
+  .bg-global-1 {
+    background-color: var(--global-bg-1);
+  }
+  .bg-global-2 {
+    background-color: var(--global-bg-2);
+  }
+  .bg-global-3 {
+    background-color: var(--global-bg-3);
+  }
+  .bg-global-4 {
+    background-color: var(--global-bg-4);
+  }
 
-  .text-global-1 { color: var(--global-text-1); }
-  .text-global-2 { color: var(--global-text-2); }
-  .text-global-3 { color: var(--global-text-3); }
-  .text-global-4 { color: var(--global-text-4); }
-  .text-global-5 { color: var(--global-text-5); }
-  .text-global-6 { color: var(--global-text-6); }
-  .text-footer-1 { color: var(--footer-text-1); }
+  .text-global-1 {
+    color: var(--global-text-1);
+  }
+  .text-global-2 {
+    color: var(--global-text-2);
+  }
+  .text-global-3 {
+    color: var(--global-text-3);
+  }
+  .text-global-4 {
+    color: var(--global-text-4);
+  }
+  .text-global-5 {
+    color: var(--global-text-5);
+  }
+  .text-global-6 {
+    color: var(--global-text-6);
+  }
+  .text-footer-1 {
+    color: var(--footer-text-1);
+  }
 
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
@@ -144,7 +166,7 @@ a:focus {
 
 #heading {
   font-size: 1.875rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 2.25rem;
   text-align: left;
@@ -167,5 +189,61 @@ a:focus {
   #heading {
     font-size: 52px;
     line-height: 57px;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 352px;
+  height: 472px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .flip-card {
+    height: 350px;
+  }
+}
+
+/* Hover effect for desktop */
+@media (min-width: 1024px) {
+  .flip-card:hover .flip-card-inner:not(.flipped) {
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .flip-card:hover .flip-card-inner.flipped {
+    transform: translateY(-2px) scale(1.02) rotateY(180deg);
   }
 }

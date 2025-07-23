@@ -22,7 +22,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
           {/* Front Side */}
           <div className="flip-card-front">
             <div className="p-0 h-full flex flex-col">
-              {/* Top: Title & Subtitle */}
+              {/*Title & Subtitle */}
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
                   <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2">
@@ -32,7 +32,8 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                     {subtitle}
                   </p>
                 </div>
-                <div className="w-14 h-14 flex items-center justify-center">
+                <div className="w-14 h-14 flex items-center justify-cent
+                er">
                   <img
                     src={upArrow}
                     alt="Flip card"
@@ -41,7 +42,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 </div>
               </div>
 
-              <div className="relative w-full h-[330px] flex items-center justify-center overflow-hidden">
+              <div className="relative max-w-full h-[330px] flex items-center justify-center overflow-hidden">
                 <img
                   src={image}
                   alt={`${title} device`}
@@ -79,64 +80,6 @@ const ProductCard = ({ title, subtitle, image, description }) => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .flip-card {
-          background-color: transparent;
-          width: 352px;
-          height: 472px;
-          perspective: 1000px;
-          cursor: pointer;
-        }
-
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-          transform-style: preserve-3d;
-        }
-
-        .flip-card-inner.flipped {
-          transform: rotateY(180deg);
-        }
-
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          border-radius: 1rem;
-          background-color: white;
-          box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-        }
-
-        .flip-card-back {
-          transform: rotateY(180deg);
-        }
-
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
-          .flip-card {
-            height: 350px;
-          }
-        }
-
-        /* Hover effect for desktop */
-        @media (min-width: 1024px) {
-          .flip-card:hover .flip-card-inner:not(.flipped) {
-            transform: translateY(-2px) scale(1.02);
-          }
-
-          .flip-card:hover .flip-card-inner.flipped {
-            transform: translateY(-2px) scale(1.02) rotateY(180deg);
-          }
-        }
-      `}</style>
     </>
   );
 };
