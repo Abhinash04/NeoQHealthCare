@@ -25,7 +25,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               {/* Top: Title & Subtitle */}
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
-                  <h3 className="text-2xl lg:text-[32px] font-bold leading-tight lg:leading-[40px] text-[#00145B] mb-2">
+                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2">
                     {title}
                   </h3>
                   <p className="text-base font-medium leading-5 text-gray-600">
@@ -41,20 +41,19 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 </div>
               </div>
 
-              {/* Bottom: Full-width Image with Glow */}
-              <div className="relative w-full mt-auto">
+              <div className="relative w-full h-[330px] flex items-center justify-center overflow-hidden">
                 <img
                   src={image}
                   alt={`${title} device`}
-                  className="w-full h-auto object-contain relative z-10 scale-[1.1]"
+                  className="max-w-full max-h-full object-contain"
                 />
               </div>
             </div>
           </div>
 
           {/* Back Side */}
-          <div className="flip-card-back">
-            <div className="p-6 lg:p-7 h-full flex flex-col justify-between">
+          <div className="flip-card-back relative overflow-hidden">
+            <div className="p-6 lg:p-7 h-full flex flex-col justify-between relative z-10">
               <div className="text-left">
                 <h3 className="text-2xl lg:text-[28px] font-bold font-montserrat leading-tight text-[#00145B] mb-2">
                   {title}
@@ -74,6 +73,9 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 />
               </div>
             </div>
+
+            {/* Blueish blurry drop shadow from bottom right */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-400/50 blur-[60px] rounded-full z-0 translate-x-6 translate-y-6"></div>
           </div>
         </div>
       </div>
@@ -81,8 +83,8 @@ const ProductCard = ({ title, subtitle, image, description }) => {
       <style jsx>{`
         .flip-card {
           background-color: transparent;
-          width: 100%;
-          height: 500px;
+          width: 352px;
+          height: 472px;
           perspective: 1000px;
           cursor: pointer;
         }
