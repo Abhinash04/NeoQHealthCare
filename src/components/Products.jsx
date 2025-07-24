@@ -25,7 +25,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               {/*Title & Subtitle */}
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
-                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-[#00145B] mb-2 whitespace-nowrap">
+                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 whitespace-nowrap">
                     {title}
                   </h3>
                   <p className="text-base font-medium leading-5 text-gray-600 whitespace-nowrap">
@@ -56,14 +56,14 @@ const ProductCard = ({ title, subtitle, image, description }) => {
 
           {/* Back Side */}
           <div className="flip-card-back relative overflow-hidden">
-            <div className="p-6 lg:p-7 h-full flex flex-col justify-between relative z-10">
+            <div className="p-5 lg:p-5 h-full flex flex-col justify-between relative z-10">
               <div className="text-left">
-                <h3 className="text-2xl lg:text-[28px] font-bold font-montserrat leading-tight text-[#00145B] mb-2">
-                  {title}
-                </h3>
-                <p className="text-base font-medium leading-[20px] text-[#666666] mb-4">
-                  {subtitle}
-                </p>
+                <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 whitespace-nowrap">
+                    {title}
+                  </h3>
+                  <p className="text-base font-medium leading-5 text-gray-600 mb-4 whitespace-nowrap">
+                    {subtitle}
+                  </p>
                 <p className="text-sm lg:text-base font-normal leading-5 lg:leading-[22px] text-[#333333]">
                   {description}
                 </p>
@@ -73,14 +73,14 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 <img
                   src={downArrow}
                   alt="Flip back"
-                  className="w-8 h-8 object-contain opacity-60 absolute bottom-0 left-0"
+                  className="w-8 h-8 object-contain absolute bottom-0 left-0"
                 />
               </div>
             </div>
 
             {/* Blueish blurry drop shadow */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#13B2F3] blur-[80px] opacity-[30%] rounded-full z-0 translate-x-6 translate-y-6"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#5380E6] blur-[80px] opacity-[30%] rounded-full z-0 translate-x-6 translate-y-6"></div>
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#13B2F3] blur-[80px] opacity-[40%] rounded-full z-0 translate-x-6 translate-y-6"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#5380E6] blur-[80px] opacity-[40%] rounded-full z-0 translate-x-6 translate-y-6"></div>
           </div>
         </div>
       </div>
