@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "./ui/Button";
 import logo from "../assets/Logo.png";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -14,9 +15,26 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      setHasShadow(scrollPercent > 5);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <header className="w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 shadow-lg">
+      <header
+        className={`w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 transition-shadow duration-300 ${
+          hasShadow ? "shadow-lg" : ""
+        }`}
+      >
         <div className="w-full mt-6 mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
@@ -61,36 +79,29 @@ const Navbar = () => {
             </button>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-center w-[519px]">
+            <nav className="hidden lg:flex items-center justify-end">
               <div className="flex items-center gap-10">
+                {["about-us", "products", "why-us"].map((section, index) => (
+                  <button
+                    key={index}
+                    role="menuitem"
+                    onClick={() => scrollToSection(section)}
+                    className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
+                  >
+                    {section === "about-us"
+                      ? "About Us"
+                      : section === "products"
+                      ? "Our Products"
+                      : "Why Us!"}
+                  </button>
+                ))}
+
                 <button
-                  role="menuitem"
-                  onClick={() => scrollToSection("about-us")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
-                >
-                  About Us
-                </button>
-                <button
-                  role="menuitem"
-                  onClick={() => scrollToSection("products")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
-                >
-                  Our Products
-                </button>
-                <button
-                  role="menuitem"
-                  onClick={() => scrollToSection("why-us")}
-                  className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
-                >
-                  Why Us!
-                </button>
-                <Button
-                  variant="outline"
                   onClick={() => scrollToSection("contact-us")}
                   className="px-8 py-3 text-base font-azeret font-semibold leading-[19px] text-global-1 border border-black rounded-3xl hover:bg-global-1 hover:text-global-6 transition-all duration-200 focus:outline-none focus:ring-0"
                 >
                   Contact Us
-                </Button>
+                </button>
               </div>
             </nav>
           </div>

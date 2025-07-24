@@ -25,7 +25,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side Content */}
-            <div className="flex flex-col lg:flex-row items-center lg:items-end gap-10 w-full lg:flex-1">
+            <div className="flex flex-col lg:flex-row items-center lg:items-end lg:justify-end lg:mr-6 gap-10 w-full lg:flex-1">
               {/* Empowering Section */}
               <div className="flex items-center gap-12 w-fit lg:mt-14 sm-gap-6">
                 <img src={divider} alt="divider" className="h-8 w-auto" />

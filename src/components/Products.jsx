@@ -68,7 +68,8 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                   {description}
                 </p>
               </div>
-              <div className="relative w-full h-full">
+
+              <div className="relative w-full h-full z-20">
                 <img
                   src={downArrow}
                   alt="Flip back"
@@ -77,8 +78,9 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               </div>
             </div>
 
-            {/* Blueish blurry drop shadow from bottom right */}
-            <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-400/50 blur-[60px] rounded-full z-0 translate-x-6 translate-y-6"></div>
+            {/* Blueish blurry drop shadow */}
+            <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#13B2F3] blur-[80px] opacity-[30%] rounded-full z-0 translate-x-6 translate-y-6"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#5380E6] blur-[80px] opacity-[30%] rounded-full z-0 translate-x-6 translate-y-6"></div>
           </div>
         </div>
       </div>
