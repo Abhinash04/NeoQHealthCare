@@ -12,13 +12,13 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500);
+    const timer = setTimeout(() => setLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
     return (
-      <div className="transition-opacity duration-500 opacity-100 animate-fadeOut">
+      <div className="transition-opacity duration-1000 opacity-100">
         <Loader />
       </div>
     );
