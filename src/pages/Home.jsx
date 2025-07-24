@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 
@@ -9,11 +9,9 @@ import Products from "../components/Products";
 import Innovation from "../components/Innovation";
 import WhyUs from "../components/WhyUs";
 import Contact from "../components/Contact";
-import Loader from "../components/Loader";
 
 const Home = () => {
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (location.state?.section) {
@@ -24,18 +22,6 @@ const Home = () => {
       });
     }
   }, [location.state]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
 
   return (
     <>

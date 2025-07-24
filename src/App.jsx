@@ -1,11 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Toaster } from 'react-hot-toast';
+import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
+
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
+import Loader from "./components/Loader";
 import "./styles.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="transition-opacity duration-500 opacity-100 animate-fadeOut">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <Router>

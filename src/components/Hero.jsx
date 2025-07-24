@@ -38,7 +38,7 @@ const Hero = () => {
               {/* Our Products Button */}
               <div
                 onClick={scrollToProducts}
-                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] justify-center lg:justify-center cursor-pointer hover:bg-cyan-400 transition-all duration-200 text-white hover:text-black"
+                className="flex items-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] justify-center lg:justify-center cursor-pointer hover:bg-[#13B2F3] transition-all duration-200 text-white hover:text-black"
               >
                 <span className="text-base font-azeret font-bold leading-[19px">
                   Our Products

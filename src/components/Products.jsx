@@ -14,7 +14,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
 
   return (
     <>
-      <div className="flip-card">
+      <div className="flip-card shadow-lg rounded-xl transition-shadow duration-300">
         <div
           className={`flip-card-inner ${isFlipped ? "flipped" : ""}`}
           onClick={handleFlip}
@@ -28,7 +28,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                   <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium leading-5 text-gray-600 whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 whitespace-nowrap">
                     {subtitle}
                   </p>
                 </div>
@@ -61,10 +61,10 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium leading-5 text-gray-600 mb-4 whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 mb-4 whitespace-nowrap">
                     {subtitle}
                   </p>
-                <p className="text-sm lg:text-base font-normal leading-5 lg:leading-[22px] text-[#333333]">
+                <p className="text-sm lg:text-base font-light font-azeret leading-5 lg:leading-[22px] text-gray-600">
                   {description}
                 </p>
               </div>

@@ -1,29 +1,12 @@
-const Loader = ({ size = "medium", color = "primary" }) => {
-  const sizeClasses = {
-    small: "w-4 h-4",
-    medium: "w-8 h-8",
-    large: "w-12 h-12",
-  };
+import Lottie from "lottie-react";
+import neoqAnimation from "../assets/neoq.json";
 
-  const colorClasses = {
-    primary: "border-global-1",
-    secondary: "border-global-2",
-    white: "border-global-6",
-  };
-
+const NeoQLoader = () => {
   return (
-    <div className="flex items-center justify-center">
-      <div
-        className={`
-          ${sizeClasses[size]} 
-          ${colorClasses[color]} 
-          border-2 border-t-transparent 
-          rounded-full 
-          animate-spin
-        `}
-      />
+    <div className="fixed inset-0 z-50 bg-white flex items-center justify-center">
+      <Lottie animationData={neoqAnimation} loop={true} className="w-72 h-72" />
     </div>
   );
 };
 
-export default Loader;
+export default NeoQLoader;
