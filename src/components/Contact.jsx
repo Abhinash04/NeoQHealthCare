@@ -83,50 +83,50 @@ const ContactUs = () => {
                 Contact Us
               </h2>
 
-              <div className="flex flex-col gap-4 px-2">
+              <div className="flex flex-col gap-4 px-2 max-[500px]:px-0">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 w-full">
                   <div className="flex items-center gap-2 w-full sm:w-auto">
-                    <Mail className="w-6 h-6 text-cyan-400" />
-                    <span className="text-lg font-azeret font-light leading-[21px] text-global-1">
+                    <Mail className="w-6 h-6 text-cyan-400 max-[500px]:w-5 max-[500px]:h-5" />
+                    <span className="text-lg font-azeret font-light leading-[21px] text-global-1 max-[500px]:text-base max-[500px]:leading-5">
                       Info@neoq.in
                     </span>
                   </div>
-                  <div className="flex items-center gap-2 w-full sm:flex-1 sm:px-11">
-                    <Phone className="w-6 h-6 text-cyan-400" />
-                    <span className="text-lg font-azeret font-light leading-[21px] text-global-1">
+                  <div className="flex items-center gap-2 w-full sm:flex-1 sm:px-11 max-[500px]:sm:px-0">
+                    <Phone className="w-6 h-6 text-cyan-400 max-[500px]:w-5 max-[500px]:h-5" />
+                    <span className="text-lg font-azeret font-light leading-[21px] text-global-1 max-[500px]:text-base max-[500px]:leading-5">
                       +91-8908807028
                     </span>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2 w-full">
-                  <Building className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400" />
-                  <span className="text-lg font-azeret font-light leading-6 text-global-1 w-[62%]">
+                  <Building className="w-6 h-6 mt-1 flex-shrink-0 text-cyan-400 max-[500px]:w-5 max-[500px]:h-5" />
+                  <span className="text-lg font-azeret font-light leading-6 text-global-1 w-[62%] max-[500px]:text-base max-[500px]:leading-5 max-[500px]:w-full">
                     L-12/27, Panchasakha Nagar, Bhubaneswar, Odisha, India -
                     751019
                   </span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 px-4">
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2">
+              <div className="flex items-center gap-6 px-4 max-[500px]:px-0 max-[500px]:gap-4">
+                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none">
                   <Facebook className="w-full h-full object-contain text-white hover:text-cyan-400" />
                 </button>
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2">
+                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none">
                   <Linkedin className="w-full h-full object-contain text-white hover:text-cyan-400" />
                 </button>
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2.5">
+                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2.5 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-2 focus:outline-none">
                   <FaXTwitter className="w-full h-full object-contain text-white hover:text-cyan-400" />
                 </button>
               </div>
             </div>
 
             {/* Right Side */}
-            <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12">
+            <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12 max-[500px]:lg:mr-0">
               <form
                 action="https://api.web3forms.com/submit"
                 method="POST"
-                className="flex flex-col gap-4"
+                className="flex flex-col gap-4 max-[500px]:gap-3"
                 onSubmit={() => setLoading(true)}
               >
                 {/* Hidden Web3Forms Access Key */}
@@ -137,7 +137,7 @@ const ContactUs = () => {
                 />
 
                 {/* From Email Field */}
-                <div className="border-b border-[#b9bbc3] pb-2">
+                <div className="border-b border-[#b9bbc3] pb-2 max-[500px]:pb-1.5">
                   <EditText
                     type="email"
                     name="email"
@@ -145,30 +145,34 @@ const ContactUs = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange("email")}
-                    className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5"
+                    className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5 max-[500px]:text-base max-[500px]:leading-4"
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm">{errors.email}</p>
+                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                      {errors.email}
+                    </p>
                   )}
                 </div>
 
                 {/* Subject Field */}
-                <div className="border-b border-[#b9bbc3] pb-2">
+                <div className="border-b border-[#b9bbc3] pb-2 max-[500px]:pb-1.5">
                   <EditText
                     name="subject"
                     placeholder="Subject"
                     required
                     value={formData.subject}
                     onChange={handleInputChange("subject")}
-                    className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5"
+                    className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5 max-[500px]:text-base max-[500px]:leading-4"
                   />
                   {errors.subject && (
-                    <p className="text-red-500 text-sm">{errors.subject}</p>
+                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                      {errors.subject}
+                    </p>
                   )}
                 </div>
 
                 {/* Message Field */}
-                <div className="border-b border-[#b9bbc3] pb-2">
+                <div className="border-b border-[#b9bbc3] pb-2 max-[500px]:pb-1.5">
                   <EditText
                     as="textarea"
                     name="message"
@@ -176,10 +180,12 @@ const ContactUs = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange("message")}
-                    className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5 h-16"
+                    className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5 h-16 max-[500px]:text-base max-[500px]:leading-5 max-[500px]:h-12"
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-sm">{errors.message}</p>
+                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 
@@ -187,16 +193,16 @@ const ContactUs = () => {
                 <div className="flex justify-end">
                   <Button
                     type="submit"
-                    className="flex items-center justify-center gap-2 lg:w-32 bg-black text-white hover:text-cyan-400 px-8 py-3 rounded-3xl transition-colors duration-200"
+                    className="flex items-center justify-center gap-2 lg:w-32 bg-black text-white hover:text-cyan-400 px-8 py-3 rounded-3xl transition-colors duration-200 max-[500px]:px-6 max-[500px]:py-2.5 max-[500px]:lg:w-28"
                   >
                     {loading ? (
                       <span className="loader border-white border-t-cyan-400"></span>
                     ) : (
                       <>
-                        <span className="text-base font-montserrat font-semibold leading-5">
+                        <span className="text-base font-montserrat font-semibold leading-5 max-[500px]:text-sm max-[500px]:leading-4">
                           Send
                         </span>
-                        <Send className="w-5 h-8" />
+                        <Send className="w-5 h-8 max-[500px]:w-4 max-[500px]:h-6" />
                       </>
                     )}
                   </Button>

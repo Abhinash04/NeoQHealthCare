@@ -31,14 +31,14 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 transition-shadow duration-300 ${
+        className={`w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 transition-shadow duration-300 h-16 sm:h-auto ${
           hasShadow ? "shadow-lg" : ""
         }`}
       >
-        <div className="w-full mt-6 mb-6 max-w-[1120px] mx-auto">
+        <div className="w-full mt-4 mb-4 sm:mt-6 sm:mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
-            <div className="w-[150px] h-[32px] flex-shrink-0">
+            <div className="w-[114px] h-6 sm:w-[150px] sm:h-[32px] flex-shrink-0">
               <img
                 src={logo}
                 alt="NEO Medical Logo"
@@ -54,24 +54,24 @@ const Navbar = () => {
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
               )}
               {/* Animated hamburger icon */}
-              <div className="w-6 h-6 flex flex-col justify-center items-center">
+              <div className="w-5 h-5 sm:w-6 sm:h-6 flex flex-col justify-center items-center">
                 <span
-                  className={`block h-0.5 w-6 bg-global-3 transition-all duration-300 ease-in-out ${
+                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 transition-all duration-300 ease-in-out ${
                     menuOpen ? "rotate-45 translate-y-1.5" : ""
                   }`}
                 />
                 <span
-                  className={`block h-0.5 w-6 bg-global-3 my-1 transition-all duration-300 ease-in-out ${
+                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 my-1 transition-all duration-300 ease-in-out ${
                     menuOpen ? "opacity-0" : ""
                   }`}
                 />
                 <span
-                  className={`block h-0.5 w-6 bg-global-3 transition-all duration-300 ease-in-out ${
+                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 transition-all duration-300 ease-in-out ${
                     menuOpen ? "-rotate-45 -translate-y-1.5" : ""
                   }`}
                 />
@@ -118,7 +118,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       <nav
-        className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[80vw] bg-global-4 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-full max-w-xs bg-global-4 shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
