@@ -26,7 +26,7 @@ const Hero = () => {
             </div>
 
             {/* Right Side Content */}
-            <div className="flex flex-col lg:flex-row items-start lg:items-end lg:justify-end lg:mr-6 gap-24 sm:gap-4 lg:gap-10 w-full lg:flex-1">
+            <div className="flex flex-col lg:flex-row items-start lg:items-end lg:justify-end lg:mr-10 gap-24 sm:gap-4 lg:gap-10 w-full lg:flex-1">
               {/* Empowering Section */}
               <div className="flex items-center gap-2 w-fit lg:mt-14 sm:gap-12">
                 <img src={divider} alt="divider" className="h-8 w-auto" />
@@ -39,7 +39,7 @@ const Hero = () => {
               {/* Our Products Button */}
               <div
                 onClick={scrollToProducts}
-                className="flex items-center justify-center gap-2 bg-black rounded-3xl px-3 py-3 w-[350px] max-[380px]:w-[300px] lg:w-[204px] lg:justify-center cursor-pointer hover:bg-[#13B2F3] transition-all duration-200 text-white hover:text-black"
+                className="flex items-center justify-center gap-2 bg-black rounded-3xl px-3 py-3 w-[350px] max-[380px]:w-[300px] lg:w-[204px] lg:justify-center cursor-pointer transition-all duration-200 text-white hover:text-cyan-400"
               >
                 <span className="text-base font-azeret font-bold leading-[19px]">
                   Our Products
