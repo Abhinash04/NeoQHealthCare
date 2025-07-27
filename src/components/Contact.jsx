@@ -76,7 +76,7 @@ const ContactUs = () => {
       <div id="contact-us"></div>
       <section className="w-full px-4 lg:mb-40 mb-8 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
         <div className="w-full max-w-[1120px] mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 w-full">
+          <div className="flex flex-col lg:flex-row gap-20 lg:gap-16 w-full">
             {/* Left Side */}
             <div className="flex flex-col gap-8 lg:gap-11 w-full lg:flex-1">
               <h2 id="heading" className="max-w-[290px]">
@@ -122,7 +122,7 @@ const ContactUs = () => {
             </div>
 
             {/* Right Side */}
-            <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12 max-[500px]:lg:mr-0">
+            <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12 lg:mt-6 max-[500px]:lg:mr-0">
               <form
                 action="https://api.web3forms.com/submit"
                 method="POST"

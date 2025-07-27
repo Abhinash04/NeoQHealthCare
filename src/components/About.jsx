@@ -26,7 +26,7 @@ const AboutUs = () => {
                     />
                   </div>
                   <div className="flex-1">
-                    <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left max-[500px]:text-sm max-[500px]:leading-5">
+                    <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left max-[500px]:text-lg max-[500px]:leading-5">
                       <span className="font-semibold text-global-1">
                         Medtech with a mission.{" "}
                       </span>{" "}
@@ -44,7 +44,7 @@ const AboutUs = () => {
               <div className="bg-global-3 rounded-3xl p-8 lg:p-12 relative overflow-hidden min-h-[320px] sm:min-h-[300px] lg:min-h-[334px]">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 h-full">
                   <div className="flex-1 lg:w-[58%] lg:pr-4">
-                    <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left max-[500px]:text-sm max-[500px]:leading-5">
+                    <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left max-[500px]:text-lg max-[500px]:leading-5">
                       <span className="font-semibold text-global-1">
                         Every newborn <br />
                         deserves accurate <br />
@@ -57,7 +57,7 @@ const AboutUs = () => {
                       </span>
                     </p>
                   </div>
-                  <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-72 lg:h-72 translate-x-[16px] max-[500px]:w-32 max-[500px]:h-36">
+                  <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-72 lg:h-72 translate-x-[16px] max-[500px]:w-48 max-[500px]:h-56">
                     <img
                       src={cribIcon}
                       alt="Medical chart"
@@ -73,7 +73,7 @@ const AboutUs = () => {
               {/* Engineers & Clinicians Card */}
               <div className="bg-global-3 rounded-3xl p-8 lg:p-12 min-h-[320px] sm:min-h-[300px] lg:min-h-[334px]">
                 <div className="text-center h-full flex flex-col justify-center">
-                  <p className="text-lg sm:text-xl font-azeret leading-6 lg:leading-[22px] text-left mb-6 lg:mb-8 max-[500px]:text-base max-[500px]:leading-5 max-[500px]:mb-4">
+                  <p className="text-lg sm:text-xl font-azeret leading-6 lg:leading-[22px] text-left mb-6 lg:mb-8 max-[500px]:text-lg max-[500px]:leading-5 max-[500px]:mb-4">
                     <span className="font-semibold text-global-1">
                       Built by
                     </span>
@@ -92,7 +92,7 @@ const AboutUs = () => {
                       who care.
                     </span>
                   </p>
-                  <p className="text-base sm:text-lg font-azeret font-normal leading-6 lg:leading-[27px] text-global-3 text-left max-[500px]:text-sm max-[500px]:leading-5">
+                  <p className="text-base sm:text-lg font-azeret font-normal leading-6 lg:leading-[27px] text-global-3 text-left max-[500px]:text-lg max-[500px]:leading-5">
                     We combine deep tech expertise with front-line medical
                     insight to make tools that matter.
                   </p>
@@ -102,7 +102,7 @@ const AboutUs = () => {
               {/* Research Card - Matching Mission card height */}
               <div className="bg-global-3 rounded-3xl relative overflow-hidden min-h-[200px] sm:min-h-[180px] lg:min-h-[224px]">
                 <div className="p-8 lg:p-12 relative z-10 h-full flex items-center">
-                  <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] text-left max-[500px]:text-sm max-[500px]:leading-5">
+                  <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] text-left max-[500px]:text-lg max-[500px]:leading-5">
                     <span className="text-lg font-bold text-global-1 max-[500px]:text-base">
                       Driven by research
                     </span>

@@ -39,7 +39,7 @@ const Hero = () => {
               {/* Our Products Button */}
               <div
                 onClick={scrollToProducts}
-                className="flex items-center justify-center gap-2 bg-black rounded-3xl px-3 py-3 w-[350px] max-[380px]:w-[300px] lg:w-[204px] lg:justify-center cursor-pointer transition-all duration-200 text-white hover:text-cyan-400"
+                className="flex items-center justify-center gap-2 bg-black rounded-3xl px-3 py-3 w-full lg:w-[204px] lg:justify-center cursor-pointer transition-all duration-200 text-white hover:text-cyan-400"
               >
                 <span className="text-base font-azeret font-bold leading-[19px]">
                   Our Products
@@ -51,11 +51,11 @@ const Hero = () => {
 
           {/* Hero Image */}
           <div className="w-full mt-8 sm:mt-12 lg:mt-8">
-            <div className="w-full max-w-[1200px] mx-auto px-0 sm:px-4 flex justify-center max-[350px]:ml-6 lg:ml-0">
+            <div className="w-full max-w-[1200px] mx-auto px-0 sm:px-4 flex justify-start sm:justify-center max-[350px]:ml-6 lg:ml-0">
               <img
                 src={heroImg}
                 alt="NEO Medical Device"
-                className="w-[350px] h-[350px] sm:w-full sm:h-auto max-[350px]:w-[300px] max-[350px]:h-[300px] object-cover rounded-2xl lg:rounded-[32px]"
+                className="w-[400px] h-[350px] sm:w-full sm:h-auto max-[350px]:w-[300px] max-[350px]:h-[300px] object-cover rounded-2xl lg:rounded-[32px]"
               />
             </div>
           </div>

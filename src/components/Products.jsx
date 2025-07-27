@@ -14,7 +14,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
 
   return (
     <>
-      <div className="flip-card shadow-lg rounded-xl transition-shadow duration-300 max-[500px]:w-[90%] max-[500px]:mx-auto">
+      <div className="flip-card shadow-lg rounded-xl transition-shadow duration-300 max-[500px]:w-[400px] max-[500px]:mx-auto">
         <div
           className={`flip-card-inner ${isFlipped ? "flipped" : ""}`}
           onClick={handleFlip}
