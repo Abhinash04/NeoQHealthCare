@@ -28,9 +28,9 @@ const Hero = () => {
             {/* Right Side Content */}
             <div className="flex flex-col lg:flex-row items-start lg:items-end lg:justify-end lg:mr-10 gap-24 sm:gap-4 lg:gap-10 w-full lg:flex-1">
               {/* Empowering Section */}
-              <div className="flex items-center gap-2 w-fit lg:mt-14 sm:gap-12">
+              <div className="flex items-center gap-4 w-fit lg:mt-14 sm:gap-12">
                 <img src={divider} alt="divider" className="h-8 w-auto" />
-                <p className="text-sm sm:text-base font-azeret font-semibold leading-5 text-black max-w-[250px] lg:text-left">
+                <p className="text-[18px] lg:text-[16px] font-azeret font-semibold leading-[1.4] lg:leading-[1.2] text-black max-w-[250px] lg:text-left">
                   Empowering Early <br />
                   Diagnosis & Monitoring
                 </p>
