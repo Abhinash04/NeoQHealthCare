@@ -234,7 +234,7 @@ a:focus {
 @media (max-width: 500px) {
   .flip-card {
     width: 90%;
-    height: 400px; 
+    height: 420px; 
     max-width: 400px;
   }
 }

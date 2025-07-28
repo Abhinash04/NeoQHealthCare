@@ -5,7 +5,7 @@ const Innovation = () => {
     <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48 items-center justify-center">
       <div className="w-full max-w-[1122px] mx-auto">
         <div
-          className="h-64 sm:h-80 lg:h-[464px] bg-cover bg-center bg-no-repeat rounded-2xl lg:rounded-3xl flex items-center"
+          className="h-64 sm:h-80 lg:h-[464px] max-[500px]:w-[400px] max-[380px]:w-[350px] bg-cover bg-center bg-no-repeat rounded-2xl lg:rounded-3xl flex items-center"
           style={{ backgroundImage: `url(${innovationImg})` }}
         >
           <div className="px-8 sm:px-12 lg:px-16 max-[500px]:px-6">
