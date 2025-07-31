@@ -9,7 +9,7 @@ const WhyUs = () => {
       <div id="why-us"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
         <div className="w-full max-w-[1120px] mx-auto">
-          <h2 id="heading" className="mb-8 max-w-[202px]">
+          <h2 id="heading" className="max-w-[202px]">
             Why Us
           </h2>
 

@@ -31,55 +31,52 @@ const Navbar = () => {
   return (
     <>
       <header
-        className={`w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 transition-shadow duration-300 h-16 sm:h-auto ${
+        className={`w-full top-0 bg-white px-4 sm:px-6 lg:px-8 fixed z-50 transition-shadow duration-300 ${
           hasShadow ? "shadow-lg" : ""
         }`}
       >
-        <div className="w-full mt-4 mb-4 sm:mt-6 sm:mb-6 max-w-[1120px] mx-auto">
+        {/* Mobile container with better alignment */}
+        <div className="flex items-center justify-between h-16 max-w-[1120px] mx-auto lg:hidden">
+          {/* Logo */}
+          <div className="w-[114px] h-6 sm:w-[150px] sm:h-[32px] flex-shrink-0">
+            <img
+              src={logo}
+              alt="NEO Medical Logo"
+              className="w-full h-full object-contain cursor-pointer"
+              onClick={() => scrollToSection("hero")}
+            />
+          </div>
+
+          {/* Hamburger Menu Icon - Perfectly aligned */}
+          <button
+            className="flex items-center justify-center w-8 h-8 text-global-3 focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{ boxShadow: 'none' }}
+          >
+            {menuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop container */}
+        <div className="hidden lg:block w-full mt-4 mb-4 sm:mt-6 sm:mb-6 max-w-[1120px] mx-auto">
           <div className="flex justify-between items-center w-full">
             {/* Logo */}
             <div className="w-[114px] h-6 sm:w-[150px] sm:h-[32px] flex-shrink-0">
               <img
                 src={logo}
                 alt="NEO Medical Logo"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain cursor-pointer"
                 onClick={() => scrollToSection("hero")}
               />
             </div>
 
-            {/* Hamburger Menu Icon (Mobile only) */}
-            <button
-              className="block lg:hidden p-2 text-global-3 z-60"
-              aria-label={menuOpen ? "Close menu" : "Open menu"}
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              {menuOpen ? (
-                <X className="w-5 h-5 sm:w-6 sm:h-6" />
-              ) : (
-                <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-              )}
-              {/* Animated hamburger icon */}
-              <div className="w-5 h-5 sm:w-6 sm:h-6 flex flex-col justify-center items-center">
-                <span
-                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 transition-all duration-300 ease-in-out ${
-                    menuOpen ? "rotate-45 translate-y-1.5" : ""
-                  }`}
-                />
-                <span
-                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 my-1 transition-all duration-300 ease-in-out ${
-                    menuOpen ? "opacity-0" : ""
-                  }`}
-                />
-                <span
-                  className={`block h-0.5 w-5 sm:w-6 bg-global-3 transition-all duration-300 ease-in-out ${
-                    menuOpen ? "-rotate-45 -translate-y-1.5" : ""
-                  }`}
-                />
-              </div>
-            </button>
-
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center justify-end">
+            <nav className="flex items-center justify-end">
               <div className="flex items-center gap-10">
                 {["about-us", "products", "why-us"].map((section, index) => (
                   <button
@@ -133,8 +130,9 @@ const Navbar = () => {
           </div>
           <button
             onClick={() => setMenuOpen(false)}
-            className="p-2 hover:bg-gray-200/20 rounded-full transition-colors"
+            className="flex items-center justify-center w-8 h-8 hover:bg-gray-200/20 rounded-full transition-colors focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
             aria-label="Close menu"
+            style={{ boxShadow: 'none' }}
           >
             <svg
               className="w-6 h-6 text-global-3"

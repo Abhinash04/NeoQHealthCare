@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
-
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Loader from "./components/Loader";

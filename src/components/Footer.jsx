@@ -31,9 +31,9 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Navigation Links */}
-          <div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-16 lg:gap-24 w-full lg:w-auto lg:mr-40 max-[500px]:gap-6 max-[500px]:sm:gap-12 max-[500px]:lg:mr-0">
+          <div className="flex flex-col sm:flex-row justify-between items-start gap-8 sm:gap-16 lg:gap-24 w-full lg:w-auto lg:mr-40 max-[500px]:flex-row max-[500px]:justify-between max-[500px]:items-start max-[500px]:gap-6 max-[500px]:sm:gap-12 max-[500px]:lg:mr-0">
             {/* Legal Links */}
-            <ul className="flex flex-col gap-4 w-full sm:w-auto max-[500px]:gap-3">
+            <ul className="flex flex-col gap-4 w-full sm:w-auto max-[500px]:gap-3 max-[500px]:w-auto">
               <li>
                 <a
                   href="#"
@@ -61,22 +61,22 @@ const Footer = () => {
             </ul>
 
             {/* Main Navigation Links */}
-            <div className="flex flex-col gap-4 w-full sm:w-auto max-[500px]:gap-3">
+            <div className="flex flex-col gap-4 w-full sm:w-auto max-[500px]:gap-3 max-[500px]:w-auto max-[500px]:items-end">
               <button
                 onClick={() => scrollToSection("about-us")}
-                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4"
+                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4 max-[500px]:text-right"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("products")}
-                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4"
+                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4 max-[500px]:text-right"
               >
                 Products
               </button>
               <button
                 onClick={() => scrollToSection("why-us")}
-                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4"
+                className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 text-left max-[500px]:text-sm max-[500px]:leading-4 max-[500px]:text-right"
               >
                 Why Us!
               </button>

@@ -25,10 +25,10 @@ const ProductCard = ({ title, subtitle, image, description }) => {
               {/*Title & Subtitle */}
               <div className="flex justify-between items-start px-5 pt-5 pb-4">
                 <div className="w-[60%] text-left">
-                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-xl max-[500px]:leading-6 whitespace-nowrap">
+                  <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-3xl max-[500px]:leading-7 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 max-[500px]:text-sm whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 max-[500px]:text-xl max-[400px]:text-lg whitespace-nowrap">
                     {subtitle}
                   </p>
                 </div>
@@ -45,7 +45,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 <img
                   src={image}
                   alt={`${title} device`}
-                  className="w-full h-auto object-cover max-[500px]:w-[85%] max-[500px]:object-contain"
+                  className="w-full h-auto object-cover max-[500px]:w-full max-[500px]:object-contain"
                 />
               </div>
             </div>
@@ -55,15 +55,16 @@ const ProductCard = ({ title, subtitle, image, description }) => {
           <div className="flip-card-back relative overflow-hidden">
             <div className="p-5 lg:p-5 h-full flex flex-col justify-between relative z-10 max-[500px]:p-4">
               <div className="text-left">
-                <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-xl max-[500px]:leading-6 whitespace-nowrap">
+                <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-3xl max-[500px]:leading-6 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 mb-4 max-[500px]:text-sm whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 mb-4 max-[500px]:text-xl whitespace-nowrap">
                     {subtitle}
                   </p>
-                <p className="text-sm lg:text-base font-light font-azeret leading-5 lg:leading-[22px] text-gray-600 max-[500px]:text-xs max-[500px]:leading-4">
+                {/* <p className="text-sm lg:text-base font-light font-azeret leading-5 flex-grow lg:leading-[22px] text-gray-600 max-[500px]:text-base max-[500px]:leading-4">
                   {description}
-                </p>
+                </p> */}
+                <p className="text-base font-light font-azeret leading-relaxed text-gray-600 flex-grow">{description}</p>
               </div>
 
               <div className="relative w-full h-full z-20">
@@ -115,7 +116,7 @@ const Products = () => {
       <div id="products"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
         <div className="w-full max-w-[1120px] mx-auto">
-          <h2 id="heading" className="mb-8 max-w-[347px]">
+          <h2 id="heading" className="max-w-[347px]">
             Our Products
           </h2>
 

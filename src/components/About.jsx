@@ -8,7 +8,7 @@ const AboutUs = () => {
       <div id="about-us"></div>
       <section className="w-full px-4 sm:px-6 lg:px-8 mt-24 sm:mt-32 lg:mt-48">
         <div className="w-full max-w-[1120px] mx-auto">
-          <h2 id="heading" className="mb-12 max-w-[241px]">
+          <h2 id="heading" className="max-w-[241px]">
             About Us
           </h2>
 
@@ -78,16 +78,16 @@ const AboutUs = () => {
                       Built by
                     </span>
                     <br />
-                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-3xl max-[500px]:leading-6">
+                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8">
                       ENGINEERS &{" "}
                     </span>
                     <br />
-                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-3xl max-[500px]:leading-6">
+                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8">
                       CLINICIANS
                     </span>
-                    <span className="text-lg sm:text-xl font-bold text-global-1 max-[500px]:text-base">
+                    {/* <span className="text-lg sm:text-xl font-bold text-global-1 max-[500px]:text-base">
                       {" "}
-                    </span>
+                    </span> */}
                     <span className="text-lg sm:text-xl font-semibold text-global-1 max-[500px]:text-base">
                       who care.
                     </span>
