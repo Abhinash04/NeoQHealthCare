@@ -4,7 +4,7 @@ const Innovation = () => {
   return (
     <section className="w-full mt-24 sm:mt-32 lg:mt-48">
       {/* Centered container for the banner */}
-      <div className="w-full max-w-[1122px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+      <div className="w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
         <div
           className="h-64 sm:h-80 lg:h-[464px] w-full max-w-[393px] sm:max-w-none max-[380px]:w-[345px] max-[350px]:w-340px bg-cover bg-center bg-no-repeat rounded-2xl lg:rounded-3xl flex items-center"
           style={{ backgroundImage: `url(${innovationImg})` }}
