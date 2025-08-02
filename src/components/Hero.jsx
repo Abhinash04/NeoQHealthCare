@@ -18,7 +18,7 @@ const Hero = () => {
           <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-40 w-full">
             {/* Hero Text */}
             <div className="w-full lg:ml-10 lg:w-[38%]">
-              <h1 id="heading">
+              <h1 id="heading" className="max-[350px]:text-base">
                 Revolutionizing
                 <br />
                 NeoNatal Care
@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row items-start lg:items-end lg:justify-end lg:mr-10 gap-24 sm:gap-4 lg:gap-10 w-full lg:flex-1">
               {/* Empowering Section */}
               <div className="flex items-center gap-4 w-fit lg:mt-14 sm:gap-12">
-                <img src={divider} alt="divider" className="h-8 w-auto" />
+                <img src={divider} alt="divider" className="h-8 w-auto max-sm:hidden" />
                 <p className="text-[18px] lg:text-[16px] font-azeret font-semibold leading-[1.4] lg:leading-[1.2] text-black max-w-[250px] lg:text-left">
                   Empowering Early <br />
                   Diagnosis & Monitoring
@@ -51,11 +51,11 @@ const Hero = () => {
 
           {/* Hero Image */}
           <div className="w-full mt-8 sm:mt-12 lg:mt-8">
-            <div className="w-full max-w-[1200px] mx-auto px-0 sm:px-4 flex justify-start sm:justify-center max-[350px]:ml-6 lg:ml-0">
+            <div className="w-full max-w-[1200px] mx-auto px-0 sm:px-4 flex justify-start sm:justify-center lg:ml-0">
               <img
                 src={heroImg}
                 alt="NEO Medical Device"
-                className="w-[400px] h-[350px] sm:w-full sm:h-auto max-[350px]:w-[300px] max-[350px]:h-[300px] object-cover rounded-2xl lg:rounded-[32px]"
+                className="w-[400px] h-[350px] sm:w-full sm:h-auto max-[350px]:w-[305px] max-[350px]:h-[300px] object-cover rounded-2xl lg:rounded-[32px]"
               />
             </div>
           </div>

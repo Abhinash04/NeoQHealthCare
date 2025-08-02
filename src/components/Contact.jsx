@@ -1,4 +1,3 @@
-// ContactUs.jsx
 import { useState } from "react";
 import Button from "./ui/Button";
 import EditText from "./ui/EditText";

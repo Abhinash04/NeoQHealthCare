@@ -46,18 +46,18 @@ const AboutUs = () => {
                   <div className="flex-1 lg:w-[58%] lg:pr-4">
                     <p className="text-base sm:text-lg font-azeret leading-6 lg:leading-[25px] text-left max-[500px]:text-[18px] max-[380px]:text-sm max-[500px]:leading-5">
                       <span className="font-semibold text-global-1">
-                        Every newborn <br />
-                        deserves accurate <br />
+                        Every newborn <br className="min-[380px]:inline hidden"/>
+                        deserves accurate <br className="min-[380px]:inline hidden"/>
                         care.{" "}
                       </span>
                       <span className="font-normal text-global-3">
-                        No matter where <br />
-                        they are born, timely <br />
-                        diagnosis should be <br />a right, not a privilege.
+                        No matter where <br className="min-[380px]:inline hidden" />
+                        they are born, timely <br className="min-[380px]:inline hidden" />
+                        diagnosis should be <br className="min-[380px]:inline hidden" />a right, not a privilege.
                       </span>
                     </p>
                   </div>
-                  <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-72 lg:h-72 translate-x-[16px] max-[500px]:w-48 max-[500px]:h-56">
+                  <div className="absolute bottom-0 right-0 w-40 h-44 lg:w-64 lg:h-64 translate-x-[16px] max-[500px]:w-48 max-[500px]:h-56">
                     <img
                       src={cribIcon}
                       alt="Medical chart"
@@ -78,11 +78,11 @@ const AboutUs = () => {
                       Built by
                     </span>
                     <br />
-                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8">
+                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8 max-[380px]:text-3xl max-[380px]:leading-6">
                       ENGINEERS &{" "}
                     </span>
                     <br />
-                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8">
+                    <span className="text-2xl sm:text-3xl lg:text-[40px] font-bold leading-tight lg:leading-[44px] text-[#13b2f3] max-[500px]:text-4xl max-[500px]:leading-8 max-[380px]:text-3xl max-[380px]:leading-6">
                       CLINICIANS
                     </span>
                     {/* <span className="text-lg sm:text-xl font-bold text-global-1 max-[500px]:text-base">
@@ -102,18 +102,16 @@ const AboutUs = () => {
               {/* Research Card - Matching Mission card height */}
               <div className="bg-global-3 rounded-3xl relative overflow-hidden min-h-[200px] sm:min-h-[180px] lg:min-h-[224px]">
                 <div className="p-8 lg:p-12 relative z-10 h-full flex items-center">
-                  <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] text-left max-[500px]:text-[18px] max-[380px]:text-sm max-[500px]:leading-5">
+                  <p className="text-base sm:text-xl font-azeret leading-6 lg:leading-[24px] lg:w-[340px] text-left max-[500px]:text-[18px] max-[380px]:text-sm max-[500px]:leading-5">
                     <span className="text-lg font-bold text-global-1 max-[500px]:text-base">
                       Driven by research
                     </span>
                     <span className="font-normal text-global-2">
-                      , grounded in care. We <br /> work closely with pediatric
-                      experts and <br />
-                      validate every product in the field.
+                      , grounded in care. We work closely with pediatric experts and validate every product in the field.
                     </span>
                   </p>
                 </div>
-                <div className="absolute bottom-0 right-0 w-32 h-32 lg:w-40 lg:h-40 max-[500px]:w-24 max-[500px]:h-24">
+                <div className="absolute bottom-0 right-0 w-32 h-32 lg:w-36 lg:h-36 max-[500px]:w-24 max-[500px]:h-24">
                   <img
                     src={researchIcon}
                     alt="Research flask"

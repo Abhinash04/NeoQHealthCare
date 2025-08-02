@@ -14,7 +14,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
 
   return (
     <>
-      <div className="flip-card shadow-lg rounded-xl transition-shadow duration-300 max-[500px]:w-[400px] max-[500px]:mx-auto max-[380px]:w-[345px]">
+      <div className="flip-card shadow-lg rounded-xl transition-shadow duration-300 max-[500px]:w-[400px] max-[500px]:mx-auto max-[380px]:w-[345px] max-[350px]:w-[308px] max-[330px]:w-[290px]">
         <div
           className={`flip-card-inner ${isFlipped ? "flipped" : ""}`}
           onClick={handleFlip}
@@ -28,7 +28,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                   <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-3xl max-[500px]:leading-7 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 max-[500px]:text-xl max-[400px]:text-lg whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 max-[500px]:text-xl max-[400px]:text-lg max-[350px]:text-base whitespace-nowrap">
                     {subtitle}
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const ProductCard = ({ title, subtitle, image, description }) => {
                 <h3 className="text-2xl lg:text-[32px] font-bold font-montserrat leading-tight lg:leading-[40px] text-black mb-0 max-[500px]:text-3xl max-[500px]:leading-6 whitespace-nowrap">
                     {title}
                   </h3>
-                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 mb-4 max-[500px]:text-xl whitespace-nowrap">
+                  <p className="text-base font-medium font-azeret leading-5 text-gray-600 mb-4 max-[500px]:text-xl max-[400px]:text-lg whitespace-nowrap">
                     {subtitle}
                   </p>
                 {/* <p className="text-sm lg:text-base font-light font-azeret leading-5 flex-grow lg:leading-[22px] text-gray-600 max-[500px]:text-base max-[500px]:leading-4">

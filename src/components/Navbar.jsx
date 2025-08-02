@@ -236,7 +236,7 @@ const Navbar = () => {
         {/* Menu Footer */}
         <div className="absolute bottom-6 left-6 right-6 text-center">
           <p className="text-sm text-global-3/70 font-azeret">
-            © 2024 NEO Medical
+            © 2024 NEOQ Medical
           </p>
         </div>
       </nav>
