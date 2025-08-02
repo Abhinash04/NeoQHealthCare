@@ -64,7 +64,7 @@ const ContactUs = () => {
       return;
     }
 
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    const accessKey = import.meta.env.WEB3FORMS;
     if (!accessKey) {
       toast.error("Configuration error. Please contact support.");
       console.error("Web3Forms access key not found in environment variables");
