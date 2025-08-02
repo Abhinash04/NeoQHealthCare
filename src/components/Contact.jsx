@@ -4,7 +4,7 @@ import Button from "./ui/Button";
 import EditText from "./ui/EditText";
 import { Building, Mail, Phone, Send, Facebook, Linkedin } from "lucide-react";
 import { FaXTwitter } from "react-icons/fa6";
-// import { toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -21,55 +21,96 @@ const ContactUs = () => {
       ...prev,
       [field]: e.target.value,
     }));
-    setErrors((prev) => ({ ...prev, [field]: null }));
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: null }));
+    }
   };
 
-  // const validateForm = () => {
-  //   const newErrors = {};
-  //   if (!formData.email) newErrors.email = "Email is required";
-  //   if (!formData.subject) newErrors.subject = "Subject is required";
-  //   if (!formData.message) newErrors.message = "Message is required";
-  //   return newErrors;
-  // };
+  const validateForm = () => {
+    const newErrors = {};
+    
+    // Email validation
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    
+    // Subject validation
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    } else if (formData.subject.trim().length < 3) {
+      newErrors.subject = "Subject must be at least 3 characters long";
+    }
+    
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters long";
+    }
+    
+    return newErrors;
+  };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   const validationErrors = validateForm();
-  //   if (Object.keys(validationErrors).length > 0) {
-  //     setErrors(validationErrors);
-  //     return;
-  //   }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Validate form
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      toast.error("Please fix the errors before submitting");
+      return;
+    }
 
-  //   setLoading(true);
-  //   const payload = {
-  //     access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
-  //     subject: formData.subject,
-  //     email: formData.email,
-  //     message: formData.message,
-  //   };
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      toast.error("Configuration error. Please contact support.");
+      console.error("Web3Forms access key not found in environment variables");
+      return;
+    }
 
-  //   try {
-  //     const response = await fetch("https://api.web3forms.com/submit", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(payload),
-  //     });
+    setLoading(true);
+    
+    const payload = {
+      access_key: accessKey,
+      subject: `Contact Form: ${formData.subject.trim()}`,
+      email: formData.email.trim(),
+      message: formData.message.trim(),
+      from_name: formData.email.trim(),
+      to_email: "Info@neoq.in",
+    };
 
-  //     const result = await response.json();
-  //     if (result.success) {
-  //       toast.success("Message sent successfully!");
-  //       setFormData({ email: "", subject: "", message: "" });
-  //     } else {
-  //       toast.error("Failed to send message. Try again.");
-  //     }
-  //   } catch {
-  //     toast.error("Error submitting form. Please try later.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        toast.success("Thank you! Your message has been sent successfully.");
+        setFormData({ email: "", subject: "", message: "" });
+        setErrors({});
+        e.target.reset();
+      } else {
+        const errorMessage = result.message || "Failed to send message. Please try again.";
+        toast.error(errorMessage);
+        console.error("Web3Forms error:", result);
+      }
+    } catch (error) {
+      toast.error("Network error. Please check your connection and try again.");
+      console.error("Network error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -109,46 +150,48 @@ const ContactUs = () => {
               </div>
 
               <div className="flex items-center gap-6 px-4 max-[500px]:px-0 max-[500px]:gap-4">
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none">
-                  <Facebook className="w-full h-full object-contain text-white hover:text-cyan-400" />
+                <button 
+                  className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none hover:bg-cyan-400 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-full h-full object-contain text-white" />
                 </button>
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none">
-                  <Linkedin className="w-full h-full object-contain text-white hover:text-cyan-400" />
+                <button 
+                  className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-1.5 focus:outline-none hover:bg-cyan-400 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-full h-full object-contain text-white" />
                 </button>
-                <button className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2.5 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-2 focus:outline-none">
-                  <FaXTwitter className="w-full h-full object-contain text-white hover:text-cyan-400" />
+                <button 
+                  className="w-10 h-10 bg-global-1 rounded flex items-center justify-center p-2.5 max-[500px]:w-8 max-[500px]:h-8 max-[500px]:p-2 focus:outline-none hover:bg-cyan-400 transition-colors"
+                  aria-label="Twitter"
+                >
+                  <FaXTwitter className="w-full h-full object-contain text-white" />
                 </button>
               </div>
             </div>
 
-            {/* Right Side */}
+            {/* Right Side - Contact Form */}
             <div className="flex flex-col gap-4 w-full lg:w-[40%] lg:self-end lg:mr-12 lg:mt-6 max-[500px]:lg:mr-0">
               <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
                 className="flex flex-col gap-4 max-[500px]:gap-3"
-                onSubmit={() => setLoading(true)}
+                onSubmit={handleSubmit}
+                noValidate
               >
-                {/* Hidden Web3Forms Access Key */}
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value={import.meta.env.VITE_WEB3FORMS_KEY}
-                />
-
-                {/* From Email Field */}
+                {/* Email Field */}
                 <div className="border-b border-[#b9bbc3] pb-2 max-[500px]:pb-1.5">
                   <EditText
                     type="email"
                     name="email"
                     placeholder="Your E-Mail"
-                    required
                     value={formData.email}
                     onChange={handleInputChange("email")}
                     className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5 max-[500px]:text-base max-[500px]:leading-4"
+                    disabled={loading}
+                    aria-describedby={errors.email ? "email-error" : undefined}
                   />
                   {errors.email && (
-                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                    <p id="email-error" className="text-red-500 text-sm max-[500px]:text-xs mt-1">
                       {errors.email}
                     </p>
                   )}
@@ -157,15 +200,17 @@ const ContactUs = () => {
                 {/* Subject Field */}
                 <div className="border-b border-[#b9bbc3] pb-2 max-[500px]:pb-1.5">
                   <EditText
+                    type="text"
                     name="subject"
                     placeholder="Subject"
-                    required
                     value={formData.subject}
                     onChange={handleInputChange("subject")}
                     className="text-lg font-azeret font-light leading-4 text-global-5 placeholder-global-5 max-[500px]:text-base max-[500px]:leading-4"
+                    disabled={loading}
+                    aria-describedby={errors.subject ? "subject-error" : undefined}
                   />
                   {errors.subject && (
-                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                    <p id="subject-error" className="text-red-500 text-sm max-[500px]:text-xs mt-1">
                       {errors.subject}
                     </p>
                   )}
@@ -177,13 +222,14 @@ const ContactUs = () => {
                     as="textarea"
                     name="message"
                     placeholder="Message"
-                    required
                     value={formData.message}
                     onChange={handleInputChange("message")}
-                    className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5 h-16 max-[500px]:text-base max-[500px]:leading-5 max-[500px]:h-12"
+                    className="text-lg font-azeret font-light leading-[21px] text-global-5 placeholder-global-5 h-16 max-[500px]:text-base max-[500px]:leading-5 max-[500px]:h-12 resize-none"
+                    disabled={loading}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-sm max-[500px]:text-xs">
+                    <p id="message-error" className="text-red-500 text-sm max-[500px]:text-xs mt-1">
                       {errors.message}
                     </p>
                   )}
@@ -193,10 +239,16 @@ const ContactUs = () => {
                 <div className="flex justify-end">
                   <Button
                     type="submit"
-                    className="flex items-center justify-center gap-2 lg:w-32 bg-black text-white hover:text-cyan-400 px-8 py-3 rounded-3xl transition-colors duration-200 max-[500px]:px-6 max-[500px]:py-2.5 max-[500px]:lg:w-28"
+                    disabled={loading}
+                    className="flex items-center justify-center gap-2 lg:w-32 bg-black text-white hover:text-cyan-400 disabled:opacity-50 disabled:cursor-not-allowed px-8 py-3 rounded-3xl transition-colors duration-200 max-[500px]:px-6 max-[500px]:py-2.5 max-[500px]:lg:w-28"
                   >
                     {loading ? (
-                      <span className="loader border-white border-t-cyan-400"></span>
+                      <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-white border-t-cyan-400 rounded-full animate-spin"></div>
+                        <span className="text-base font-montserrat font-semibold leading-5 max-[500px]:text-sm max-[500px]:leading-4">
+                          Sending...
+                        </span>
+                      </div>
                     ) : (
                       <>
                         <span className="text-base font-montserrat font-semibold leading-5 max-[500px]:text-sm max-[500px]:leading-4">
