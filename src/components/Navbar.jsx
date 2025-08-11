@@ -49,7 +49,7 @@ const Navbar = () => {
 
           {/* Hamburger Menu Icon - Perfectly aligned */}
           <button
-            className="flex items-center justify-center w-8 h-8 text-global-3 focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
+            className="flex items-center justify-center w-8 h-8 text-global-1 focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMenuOpen(!menuOpen)}
             style={{ boxShadow: 'none' }}
@@ -83,7 +83,7 @@ const Navbar = () => {
                     key={index}
                     role="menuitem"
                     onClick={() => scrollToSection(section)}
-                    className="text-base font-azeret font-semibold leading-[19px] text-global-3 hover:text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
+                    className="text-base font-azeret font-semibold leading-[19px] text-global-1 transition-colors duration-200 focus:outline-none focus:ring-0"
                   >
                     {section === "about-us"
                       ? "About Us"
@@ -130,12 +130,12 @@ const Navbar = () => {
           </div>
           <button
             onClick={() => setMenuOpen(false)}
-            className="flex items-center justify-center w-8 h-8 hover:bg-gray-200/20 rounded-full transition-colors focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
+            className="flex items-center justify-center w-8 h-8 text-global-1 rounded-full transition-colors focus:outline-none focus:ring-0 shadow-none border-0 bg-transparent"
             aria-label="Close menu"
             style={{ boxShadow: 'none' }}
           >
             <svg
-              className="w-6 h-6 text-global-3"
+              className="w-6 h-6 text-global-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -155,7 +155,7 @@ const Navbar = () => {
           <button
             role="menuitem"
             onClick={() => scrollToSection("about-us")}
-            className="group text-lg font-azeret font-medium text-global-3 hover:text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
+            className="group text-lg font-azeret font-medium text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
           >
             <span className="flex items-center">
               About Us
@@ -178,7 +178,7 @@ const Navbar = () => {
           <button
             role="menuitem"
             onClick={() => scrollToSection("products")}
-            className="group text-lg font-azeret font-medium text-global-3 hover:text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
+            className="group text-lg font-azeret font-medium text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
           >
             <span className="flex items-center">
               Our Products
@@ -201,7 +201,7 @@ const Navbar = () => {
           <button
             role="menuitem"
             onClick={() => scrollToSection("why-us")}
-            className="group text-lg font-azeret font-medium text-global-3 hover:text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
+            className="group text-lg font-azeret font-medium text-global-1 transition-all duration-200 text-left py-4 px-4 rounded-lg hover:bg-gray-200/10 border-l-4 border-transparent hover:border-global-1"
           >
             <span className="flex items-center">
               Why Us!

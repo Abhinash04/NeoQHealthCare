@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-4 w-full sm:w-auto max-[500px]:gap-3 max-[500px]:w-auto">
               <li>
                 <a
-                  href="#"
+                  href="#contact-us"
                   className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 max-[500px]:text-sm max-[500px]:leading-4"
                 >
                   Privacy Policy
@@ -44,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact-us"
                   className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 max-[500px]:text-sm max-[500px]:leading-4"
                 >
                   Terms & Conditions
@@ -52,7 +52,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact-us"
                   className="text-base font-azeret font-normal leading-[19px] text-global-6 hover:text-footer-1 transition-colors duration-200 max-[500px]:text-sm max-[500px]:leading-4"
                 >
                   Career
