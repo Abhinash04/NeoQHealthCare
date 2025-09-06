@@ -100,14 +100,14 @@ const Products = () => {
       subtitle: "Rapid Jaundice Detection Kit",
       image: product1,
       description:
-        "BiliFast is a rapid, non-invasive jaundice detection kit designed for quick and accurate assessment of bilirubin levels in newborns. Using advanced photometric technology, it provides instant results without the need for blood samples, making it ideal for routine screening in hospitals, clinics, and community health centers.",
+        "BiliFast: A disposable, rapid diagnostic kit utilizing screen-printed carbon electrode strips for quick and accurate detection of neonatal jaundice.",
     },
     {
       title: "BiliFast Pro",
       subtitle: "Handheld TcB Monitor",
       image: product2,
       description:
-        "BiliFast Pro is an enhanced version of our jaundice detection system, featuring improved accuracy, cloud connectivity, and comprehensive reporting capabilities. Perfect for healthcare facilities requiring detailed documentation and remote monitoring of neonatal jaundice cases.",
+        "BiliFast Pro: An advanced, non-invasive transcutaneous bilirubin monitor that automatically compensates for skin tone variations.",
     },
   ];
 
