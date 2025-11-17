@@ -21,7 +21,7 @@ const Products = () => {
                   <img
                     src={NeoTrack}
                     alt="NeoTrak Device"
-                    className="w-full h-auto transform hover:scale-150 transition-transform duration-300 drop-shadow-2xl"
+                    className="w-full h-auto transform hover:scale-125 transition-transform duration-300 drop-shadow-2xl"
                   />
                 </div>
               </div>
